@@ -14,8 +14,7 @@ export default function App() {
     return (
       <NavigationContainer>
 
-      <Stack.Navigator 
-      initialRouteName="Login">
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Cadastro" component={Cadastro} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Home} />

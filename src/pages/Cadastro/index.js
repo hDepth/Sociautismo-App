@@ -1,11 +1,11 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 import React, { useState } from "react";
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, } from 'react-native';
 import estilos from '../../css/estilocadastro';
 import app from "../../services/firebase"
 
-export default function Cadastro({ }) {
+export default function Cadastro( {navigation} ) {
     const [email, setEmail] = useState('');
     const [password, setPassword] =  useState('');
 
@@ -64,7 +64,14 @@ export default function Cadastro({ }) {
 
         <TouchableOpacity
             style={estilos.Botao} 
-            title="Logar">
+            onPress={createUser}>
+            <Text style={estilos.textoBotao}>Cadastrar-se</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+        onPress={() => navigation.navigate('Login')}
+        style={estilos.Botao}>
+          <Text style={estilos.textoBotao}>Entrar</Text>
         </TouchableOpacity>
         </View>
         </View>

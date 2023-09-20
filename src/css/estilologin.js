@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 
-const estilos = StyleSheet . create({
+const estilos = StyleSheet.create({
 
     containerPrincipal:{
       flex:1,
@@ -34,7 +34,7 @@ const estilos = StyleSheet . create({
       backgroundColor: '#ffffff',
       borderWidth: 2,
       padding: 15,
-      fontSize: 18,
+      fontSize: '18px',
       borderRadius: 50,
       marginTop: 20,
       marginHorizontal: 10,
@@ -44,7 +44,7 @@ const estilos = StyleSheet . create({
       backgroundColor: '#ffffff',
       borderWidth: 2, 
       padding: 15,
-      fontSize: 18,
+      fontSize: '18px',
       borderRadius: 50,
       marginTop: 20,
       marginHorizontal: 10,
@@ -63,7 +63,7 @@ const estilos = StyleSheet . create({
 
     textoBotao:{
       color: 'black',
-      fontSize:15,
+      fontSize: '15px',
       fontWeight:'bold',
       alignSelf: 'center',
     }
