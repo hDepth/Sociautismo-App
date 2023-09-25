@@ -3,11 +3,22 @@ import { StyleSheet } from "react-native";
 const estilos = StyleSheet.create({
   
   containerPrincipal: {
-    backgroundColor: "#00c8ff",
     flex: 1,
     flexDirection: "column",
   },
-
+  imagemFundo: {
+    flex: 1,
+    resizeMode: "cover",
+    width: "auto",
+    height: "auto",
+  },
+  imagemLogo: {
+    width: 200,
+    height: 200,
+    left: 60,
+    top: 10,
+    borderRadius: 50,
+  },
   title: {
     color: "#000000",
     fontSize: 55,
@@ -45,7 +56,6 @@ const estilos = StyleSheet.create({
   },
 
   caixaSenha: {
-    borderColor: "#ffffff",
     backgroundColor: "#ffffff",
     borderWidth: 2,
     padding: 15,

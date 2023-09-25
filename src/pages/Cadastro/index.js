@@ -2,7 +2,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, ImageBackground, Image } from "react-native";
 
 import app from "../../services/firebase";
 import estilos from "../../css/estilocadastro";
@@ -28,18 +28,22 @@ export default function Cadastro({ navigation }) {
 
   return (
     <View style={estilos.containerPrincipal}>
+      <ImageBackground
+        style={estilos.imagemFundo}
+        source={require("../../img/Rectangle.jpg")}>
+
+        <Image
+          style={estilos.imagemLogo}
+          source={require("../../img/Logo.png")}
+        />
+
       <View>
         <Text style={estilos.title}></Text>
-      </View>
-
-      <View style={estilos.area}>
-        <Text style={estilos.titleArea}>Cadastro</Text>
       </View>
       <View style={estilos.container}>
         <TextInput
           style={estilos.caixasTexto}
           placeholder="email"
-          placeholderTextColor="#313131"
           value={email}
           onChangeText={(value) => setEmail(value)}
         />
@@ -49,9 +53,11 @@ export default function Cadastro({ navigation }) {
           placeholderTextColor="#313131"
           value={password}
           onChangeText={(value) => setPassword(value)}
+          secureTextEntry
         />
 
-        <TouchableOpacity style={estilos.Botao} onPress={createUser}>
+        <TouchableOpacity style={estilos.Botao} 
+        onPress={createUser}>
           <Text style={estilos.textoBotao}>Cadastrar-se</Text>
         </TouchableOpacity>
 
@@ -62,6 +68,7 @@ export default function Cadastro({ navigation }) {
           <Text style={estilos.textoBotao}>Entrar</Text>
         </TouchableOpacity>
       </View>
+      </ImageBackground>
     </View>
   );
 }

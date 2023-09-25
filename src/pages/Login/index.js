@@ -37,9 +37,6 @@ export default function Login({ navigation }) {
         style={estilos.imagemFundo}
         source={require("../../img/Rectangle.jpg")}
       >
-        <View>
-          <Text style={estilos.title}>Login</Text>
-        </View>
 
         <Image
           style={estilos.imagemLogo}
@@ -49,23 +46,26 @@ export default function Login({ navigation }) {
         <TextInput
           style={estilos.caixaEmail}
           value={email}
-          placeholder="  Email"
+          placeholder="Email"
           onChangeText={(texto) => setEmail(texto)}
         />
 
         <TextInput
           style={estilos.caixaSenha}
-          placeholder=" Senha"
+          placeholder="Senha"
           value={password}
           onChangeText={(password) => setPassword(password)}
           secureTextEntry
         />
 
-        <TouchableOpacity onPress={singnIn} style={estilos.Botao}>
+        <TouchableOpacity
+        onPress={() => navigation.navigate("Home")}
+        style={estilos.Botao}>
           <Text style={estilos.textoBotao}>Entrar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={estilos.Botao}>
+        <TouchableOpacity style={estilos.Botao}
+        onPress={() => navigation.navigate("Cadastro")}>
           <Text style={estilos.textoBotao}>não tem uma conta?</Text>
         </TouchableOpacity>
       </ImageBackground>

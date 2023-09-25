@@ -1,27 +1,11 @@
-import { Text, SafeAreaView, StyleSheet } from 'react-native';
+import '@react-navigation/drawer'
+import { NavigationContainer } from "@react-navigation/native";
+import DrawerRoutes from "../../routes";
 
-
-export default function App() {
+export default function Routes() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.paragraph}>
-        Home
-      </Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <DrawerRoutes />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});

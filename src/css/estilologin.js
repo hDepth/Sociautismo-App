@@ -61,7 +61,7 @@ const estilos = StyleSheet.create({
 
   textoBotao: {
     color: "black",
-    fontSize: z15,
+    fontSize: 15,
     fontWeight: "bold",
     alignSelf: "center",
   },
