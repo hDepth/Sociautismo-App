@@ -13,9 +13,12 @@ export default function Cadastro({ navigation }) {
 
   async function createUser() {
     const auth = getAuth(app);
+
     await createUserWithEmailAndPassword(auth, email, password)
+
       .then((userCredential) => {
-        console.log("cadastrado com sucesso - ", credentials.user.uid);
+
+        console.log("cadastrado com sucesso - ", userCredential.user.uid);
       })
       .catch((error) => {
         console.log("ENOENT ERR!", error.code);

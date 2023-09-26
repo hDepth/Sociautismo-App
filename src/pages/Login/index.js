@@ -9,21 +9,22 @@ import {
 } from "react-native";
 
 import estilos from "../../css/estilologin";
-
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../../services/firebase";
+
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   async function singnIn() {
+
     const auth = getAuth(app);
+
     await signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        {
-          () => navigation.navigate("Home");
-        }
+      .then((userCredential) => {        
+        navigation.navigate("TabRoutes");
+        
         console.log("Usuário entrou! - ", userCredential.user);
       })
       .catch((error) => {
@@ -59,7 +60,7 @@ export default function Login({ navigation }) {
         />
 
         <TouchableOpacity
-        onPress={() => navigation.navigate("Home")}
+        onPress={singnIn}
         style={estilos.Botao}>
           <Text style={estilos.textoBotao}>Entrar</Text>
         </TouchableOpacity>
