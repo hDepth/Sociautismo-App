@@ -2,6 +2,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons'; 
+import { FontAwesome5 } from '@expo/vector-icons'; 
+import { MaterialIcons } from '@expo/vector-icons'; 
 
 import Teapet from '../page/Teapet';
 import Pictogame from '../page/Pictogame';
@@ -13,7 +15,7 @@ export default function TabRoutes(){
     return(
         <Tab.Navigator InitialRouteName="Home" screenOptions={{headerShown: false}}>
     <Tab.Screen
-    name="teapet" component={Teapet}
+    name="home" component={Home}
     options={{
         tabBarIcon: ({color, size}) => <FontAwesome name="home" size={24} color="black" />,
         tabBarLabel: 'Home'
@@ -31,8 +33,16 @@ export default function TabRoutes(){
     <Tab.Screen
     name="metas" component={Metas}
     options={{
-        tabBarIcon: ({color, size}) => <Feather name="plus" color={color} size={size} />,
+        tabBarIcon: ({color, size}) => <FontAwesome5 name="tasks" size={24} color="black" />,
         tabBarLabel: 'Metas'
+    }}
+    />
+
+    <Tab.Screen
+    name="Teapet" component={Teapet}
+    options={{
+        tabBarIcon: ({color, size}) => <MaterialIcons name="pets" size={24} color="black" />,
+        tabBarLabel: 'Jogos'
     }}
     />
 
