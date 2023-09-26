@@ -22,7 +22,8 @@ export default function Login({ navigation }) {
     const auth = getAuth(app);
 
     await signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {        
+      .then((userCredential) => {    
+            
         navigation.navigate("TabRoutes");
         
         console.log("Usuário entrou! - ", userCredential.user);

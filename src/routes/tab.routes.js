@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Feather } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons'; 
 import { FontAwesome5 } from '@expo/vector-icons'; 
@@ -8,10 +7,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 import Teapet from '../page/Teapet';
 import Pictogame from '../page/Pictogame';
 import Metas from '../page/Metas';
+import Home from '../page/Home';
 
 const Tab = createBottomTabNavigator();
 
-export default function TabRoutes(){
+export default function TabRoute(){
     return(
         <Tab.Navigator InitialRouteName="Home" screenOptions={{headerShown: false}}>
     <Tab.Screen

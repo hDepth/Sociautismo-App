@@ -8,7 +8,7 @@ import Login from '../pages/Login';
 import Cadastro from '../pages/Cadastro';
 import TabRoutes from './tab.routes';
 
-export default function Stack() {
+export default function StackRoute() {
   
     return (
       <NavigationContainer>
