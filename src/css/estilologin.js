@@ -65,6 +65,9 @@ const estilos = StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "center",
   },
+  recsenha: {
+marginTop: 5,
+  },
 });
 
 export default estilos;

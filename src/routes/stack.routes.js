@@ -7,6 +7,7 @@ const Stack = createStackNavigator();
 import Login from '../pages/Login';
 import Cadastro from '../pages/Cadastro';
 import TabRoutes from './tab.routes';
+import RecSenha from '../pages/RecSenha';
 
 export default function StackRoute() {
   
@@ -17,6 +18,7 @@ export default function StackRoute() {
         <Stack.Screen name="Cadastro" component={Cadastro} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="TabRoutes" component={TabRoutes} />
+        <Stack.Screen name="RecSenha" component={RecSenha} />
       </Stack.Navigator>
 
 </NavigationContainer>

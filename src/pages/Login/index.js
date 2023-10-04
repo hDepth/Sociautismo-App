@@ -6,8 +6,8 @@ import {
   TouchableOpacity,
   ImageBackground,
   Image,
+  Pressable,
 } from "react-native";
-
 import estilos from "../../css/estilologin";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../../services/firebase";
@@ -16,6 +16,7 @@ import app from "../../services/firebase";
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
 
   async function singnIn() {
 
@@ -59,6 +60,10 @@ export default function Login({ navigation }) {
           onChangeText={(password) => setPassword(password)}
           secureTextEntry
         />
+        <Pressable style={estilos.recsenha}
+          onPress={() => navigation.navigate("RecSenha")}>
+            <Text>Esqueci a Senha</Text>
+        </Pressable>
 
         <TouchableOpacity
         onPress={singnIn}
