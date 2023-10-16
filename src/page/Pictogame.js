@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Modal, Animated } from 'react-native'
+import { View, Text, SafeAreaView, StatusBar, Image, TouchableOpacity, Modal, Animated } from 'react-native'
+import { COLORS, SIZES } from '../constants';
 import data from '../data/PictogameData';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import estilos from '../css/estilopictogame';
 
 const Quiz = () => {
 
@@ -66,15 +66,23 @@ const Quiz = () => {
 
     const renderQuestion = () => {
         return (
-            <View style={estilos.rederquestion}>
+            <View style={{
+                marginVertical: 40
+            }}>
                 {/* Question Counter */}
-                <View style={estilos.contadorquestao}>
-                    <Text style={estilos.textcont1}>{currentQuestionIndex+1}</Text>
-                    <Text style={estilos.textcont2}>/ {allQuestions.length}</Text>
+                <View style={{
+                    flexDirection: 'row',
+                    alignItems: 'flex-end'
+                }}>
+                    <Text style={{color: COLORS.white, fontSize: 20, opacity: 0.6, marginRight: 2}}>{currentQuestionIndex+1}</Text>
+                    <Text style={{color: COLORS.white, fontSize: 18, opacity: 0.6}}>/ {allQuestions.length}</Text>
                 </View>
 
                 {/* Question */}
-                <Text style={estilos.question}>{allQuestions[currentQuestionIndex]?.question}</Text>
+                <Text style={{
+                    color: COLORS.white,
+                    fontSize: 30
+                }}>{allQuestions[currentQuestionIndex]?.question}</Text>
             </View>
         )
     }
@@ -87,19 +95,50 @@ const Quiz = () => {
                         onPress={()=> validateAnswer(option)}
                         disabled={isOptionsDisabled}
                         key={option}
-                        style={estilos.renderoptions}
+                        style={{
+                            borderWidth: 3, 
+                            borderColor: option==correctOption 
+                            ? COLORS.success
+                            : option==currentOptionSelected 
+                            ? COLORS.error 
+                            : COLORS.secondary+'40',
+                            backgroundColor: option==correctOption 
+                            ? COLORS.success +'20'
+                            : option==currentOptionSelected 
+                            ? COLORS.error +'20'
+                            : COLORS.secondary+'20',
+                            height: 60, borderRadius: 20,
+                            flexDirection: 'row',
+                            alignItems: 'center', justifyContent: 'space-between',
+                            paddingHorizontal: 20,
+                            marginVertical: 10
+                        }}
                         >
-                            <Text style={estilos.textoption}>{option}</Text>
+                            <Text style={{fontSize: 20, color: COLORS.white}}>{option}</Text>
 
                             {/* Show Check Or Cross Icon based on correct answer*/}
                             {
                                 option==correctOption ? (
-                                    <View style={estilos.correctOption}>
-                                        <MaterialCommunityIcons name="check" style={estilos.iconesV} />
+                                    <View style={{
+                                        width: 30, height: 30, borderRadius: 30/2,
+                                        backgroundColor: COLORS.success,
+                                        justifyContent: 'center', alignItems: 'center'
+                                    }}>
+                                        <MaterialCommunityIcons name="check" style={{
+                                            color: COLORS.white,
+                                            fontSize: 20
+                                        }} />
                                     </View>
                                 ): option == currentOptionSelected ? (
-                                    <View style={estilos.wrongOption}>
-                                        <MaterialCommunityIcons name="close" style={estilos.iconesX} />
+                                    <View style={{
+                                        width: 30, height: 30, borderRadius: 30/2,
+                                        backgroundColor: COLORS.error,
+                                        justifyContent: 'center', alignItems: 'center'
+                                    }}>
+                                        <MaterialCommunityIcons name="close" style={{
+                                            color: COLORS.white,
+                                            fontSize: 20
+                                        }} />
                                     </View>
                                 ) : null
                             }
@@ -115,8 +154,10 @@ const Quiz = () => {
             return (
                 <TouchableOpacity
                 onPress={handleNext}
-                style={estilos.nextbutton}>
-                    <Text style={estilos.textnext}>Next</Text>
+                style={{
+                    marginTop: 20, width: '100%', backgroundColor: COLORS.accent, padding: 20, borderRadius: 5
+                }}>
+                    <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Next</Text>
                 </TouchableOpacity>
             )
         }else{
@@ -132,11 +173,17 @@ const Quiz = () => {
     })
     const renderProgressBar = () => {
         return (
-            <View style={estilos.renderbar}>
+            <View style={{
+                width: '100%',
+                height: 20,
+                borderRadius: 20,
+                backgroundColor: '#00000020',
+
+            }}>
                 <Animated.View style={[{
                     height: 20,
                     borderRadius: 20,
-                    backgroundColor: '#3498db'
+                    backgroundColor: COLORS.accent
                 },{
                     width: progressAnim
                 }]}>
@@ -149,9 +196,17 @@ const Quiz = () => {
 
 
     return (
-       <SafeAreaView style={estilos.container}>
-           <StatusBar barStyle="light-content" backgroundColor={"#252c4a"} />
-           <View style={estilos.viewInSafeView}>
+       <SafeAreaView style={{
+           flex: 1
+       }}>
+           <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+           <View style={{
+               flex: 1,
+               paddingVertical: 40,
+               paddingHorizontal: 16,
+               backgroundColor: COLORS.background,
+               position:'relative'
+           }}>
 
                {/* ProgressBar */}
                { renderProgressBar() }
@@ -171,22 +226,45 @@ const Quiz = () => {
                transparent={true}
                visible={showScoreModal}
                >
-                   <View style={estilos.viewmodal}>
-                       <View style={estilos.viewmodal2}>
-                           <Text style={estilos.textmodal}>{ score> (allQuestions.length/2) ? 'Congratulations!' : 'Oops!' }</Text>
+                   <View style={{
+                       flex: 1,
+                       backgroundColor: COLORS.primary,
+                       alignItems: 'center',
+                       justifyContent: 'center'
+                   }}>
+                       <View style={{
+                           backgroundColor: COLORS.white,
+                           width: '90%',
+                           borderRadius: 20,
+                           padding: 20,
+                           alignItems: 'center'
+                       }}>
+                           <Text style={{fontSize: 30, fontWeight: 'bold'}}>{ score> (allQuestions.length/2) ? 'Congratulations!' : 'Oops!' }</Text>
 
-                           <View style={estilos.viewmodal3}>
+                           <View style={{
+                               flexDirection: 'row',
+                               justifyContent: 'flex-start',
+                               alignItems: 'center',
+                               marginVertical: 20
+                           }}>
                                <Text style={{
                                    fontSize: 30,
-                                   color: score> (allQuestions.length/2) ? '#00C851' : '#ff4444'
+                                   color: score> (allQuestions.length/2) ? COLORS.success : COLORS.error
                                }}>{score}</Text>
-                                <Text style={estilos.textallquestions}>/ { allQuestions.length }</Text>
+                                <Text style={{
+                                    fontSize: 20, color: COLORS.black
+                                }}>/ { allQuestions.length }</Text>
                            </View>
                            {/* Retry Quiz button */}
                            <TouchableOpacity
                            onPress={restartQuiz}
-                           style={estilos.retrybutton}>
-                               <Text style={estilos.textretry}>Retry Quiz</Text>
+                           style={{
+                               backgroundColor: COLORS.accent,
+                               padding: 20, width: '100%', borderRadius: 20
+                           }}>
+                               <Text style={{
+                                   textAlign: 'center', color: COLORS.white, fontSize: 20
+                               }}>Retry Quiz</Text>
                            </TouchableOpacity>
 
                        </View>
@@ -195,6 +273,20 @@ const Quiz = () => {
                </Modal>
 
                {/* Background Image */}
+               <Image
+                source={require('../img/Logo.png')}
+                style={{
+                    width: SIZES.width,
+                    height: 130,
+                    zIndex: -1,
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    opacity: 0.5
+                }}
+                resizeMode={'contain'}
+                />
 
            </View>
        </SafeAreaView>
