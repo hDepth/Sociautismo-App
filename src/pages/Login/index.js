@@ -62,7 +62,7 @@ export default function Login({ navigation }) {
         />
         <Pressable style={estilos.recsenha}
           onPress={() => navigation.navigate("RecSenha")}>
-            <Text>Esqueci a Senha</Text>
+            <Text style={estilos.textrecsenha}>Esqueci a Senha</Text>
         </Pressable>
 
         <TouchableOpacity

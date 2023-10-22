@@ -5,13 +5,9 @@ const estilos = StyleSheet . create({
    container: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#dacdf7',
-    padding: 8,
   },
 
   containerPrincipal:{
-    
-    flex:1,
     flexDirection: "column",
   },
 
@@ -19,6 +15,7 @@ const estilos = StyleSheet . create({
     flex: 1,
     resizeMode: 'cover',
     width: "auto",
+    height: "auto",
   },
 
   
@@ -69,7 +66,6 @@ const estilos = StyleSheet . create({
 
   textMeta:{
    marginLeft: 25,
-   alignSelf: 'center',
   },
 
   botaoMeta:{

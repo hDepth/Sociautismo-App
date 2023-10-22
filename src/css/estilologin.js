@@ -17,15 +17,15 @@ const estilos = StyleSheet.create({
     color: "#000000",
     fontSize: 30,
     fontWeight: "bold",
-    margin: 20,
+    margin: 0,
   },
 
   imagemLogo: {
-    width: 200,
+    width: 'auto',
     height: 200,
-    left: 60,
-    top: 10,
-    borderRadius: 50,
+    marginTop: 40,
+    left: 15,
+
   },
 
   caixaEmail: {
@@ -66,8 +66,13 @@ const estilos = StyleSheet.create({
     alignSelf: "center",
   },
   recsenha: {
-marginTop: 5,
+    margin: 20,
   },
+  textrecsenha: {
+    color: 'blue',
+    fontSize: 15,
+    fontWeight:'bold',
+  }
 });
 
 export default estilos;

@@ -1,4 +1,4 @@
-import { Text, View, TextInput, Pressable } from "react-native";
+import { Text, View, TextInput, Pressable, Image, ImageBackground } from "react-native";
 import estilos from "../../css/estiloRecSenha";
 import { useState } from "react";
 import app from "../../services/firebase";
@@ -32,10 +32,21 @@ export default function RecSenha({ navigation }) {
     }
 
     return (
-<View style={estilos.container}>
-    <Text style={estilos.formTitle}>Redefinição de Senha</Text>
+<View style={estilos.containerPrincipal}>
+
+<ImageBackground
+      source={require('../../img/Rectangle.jpg')}
+      style={estilos.imagemFundo}
+      >
+
+
+    <Text style={estilos.titleArea}>Recuperação de Senha</Text>
+     
+
+    <Text style={estilos.titleCaixat}>Email:</Text>
+
     <TextInput
-    style={estilos.formInput}
+    style={estilos.caixaEmail}
     placeholder="informe o email"
     keyboardType="email-address"
     autoCapitalize="none"
@@ -43,22 +54,22 @@ export default function RecSenha({ navigation }) {
     value={userMail}
     onChangeText={setUserMail}
     />
-    <Pressable
-    style={estilos.sendButton}
-    onPress={replacePass}>
-        <Text style={estilos.textButton}>Enviar</Text>
-    </Pressable>
-
+    
     <View style={estilos.subContainer}>
-        <Pressable
-        onPress={() => navigation.navigate("Login")}>
-            <Text>Voltar</Text>
-        </Pressable>
+
+    <Pressable style={estilos.Botao}
+         onPress={replacePass}>
+          <Text style={estilos.textoBotao}>Enviar</Text>
+     </Pressable>
+
+        <Pressable style={estilos.Botao}
+         onPress={() => navigation.navigate("Login")}>
+          <Text style={estilos.textoBotao}>Voltar</Text>
+     </Pressable>
 
     </View>
 
-
-
+  </ImageBackground>
 </View>
     );
     

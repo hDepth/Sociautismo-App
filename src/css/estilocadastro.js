@@ -13,39 +13,23 @@ const estilos = StyleSheet.create({
     height: "auto",
   },
   imagemLogo: {
-    width: 200,
+    width: 'auto',
     height: 200,
-    left: 60,
-    top: 10,
-    borderRadius: 50,
+    left: 15,
+    top: 40,
+
   },
   title: {
     color: "#000000",
-    fontSize: 55,
+    fontSize: 40,
     fontWeight: "bold",
-    margin: 20,
+    marginTop: 130,
+    marginBottom: 25,
   },
 
-  area: {
-    flexDirection: "row",
-    backgroundColor: "#ffffff",
-    borderRadius: 70,
-    height: 120,
-    width: 260,
-    marginTop: 50,
-    alignSelf: "center",
-  },
-
-  titleArea: {
-    color: "#000000",
-    fontSize: 50,
-    fontWeight: "bold",
-    alignSelf: "center",
-    margin: 20,
-  },
 
   caixasTexto: {
-    borderColor: "white",
+    borderColor: "black",
     backgroundColor: "#ffffff",
     borderWidth: 2,
     padding: 15,
@@ -56,6 +40,7 @@ const estilos = StyleSheet.create({
   },
 
   caixaSenha: {
+    borderColor: "black",
     backgroundColor: "#ffffff",
     borderWidth: 2,
     padding: 15,

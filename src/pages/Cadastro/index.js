@@ -31,19 +31,16 @@ export default function Cadastro({ navigation }) {
 
   return (
     <View style={estilos.containerPrincipal}>
+
       <ImageBackground
         style={estilos.imagemFundo}
         source={require("../../img/Rectangle.jpg")}>
 
-        <Image
-          style={estilos.imagemLogo}
-          source={require("../../img/Logo.png")}
-        />
+      
+     
+        <Text style={estilos.title}>Cadastre-se</Text>
 
-      <View>
-        <Text style={estilos.title}></Text>
-      </View>
-      <View style={estilos.container}>
+  
         <TextInput
           style={estilos.caixasTexto}
           placeholder="email"
@@ -70,7 +67,6 @@ export default function Cadastro({ navigation }) {
         >
           <Text style={estilos.textoBotao}>Entrar</Text>
         </TouchableOpacity>
-      </View>
       </ImageBackground>
     </View>
   );

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { View, Text, SafeAreaView, StatusBar, Image, TouchableOpacity, Modal, Animated } from 'react-native'
+import { View, Text, SafeAreaView, StatusBar, Image, TouchableOpacity, Modal, Animated, ScrollView } from 'react-native'
 import { COLORS, SIZES } from '../constants';
 import data from '../data/PictogameData';
+import estilos from '../css/estilopictogame';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Quiz = () => {
@@ -67,22 +68,24 @@ const Quiz = () => {
     const renderQuestion = () => {
         return (
             <View style={{
-                marginVertical: 40
+                marginVertical: 0
             }}>
+                 <ScrollView style={ {marginHorizontal: 20}}>
                 {/* Question Counter */}
                 <View style={{
                     flexDirection: 'row',
                     alignItems: 'flex-end'
                 }}>
-                    <Text style={{color: COLORS.white, fontSize: 20, opacity: 0.6, marginRight: 2}}>{currentQuestionIndex+1}</Text>
-                    <Text style={{color: COLORS.white, fontSize: 18, opacity: 0.6}}>/ {allQuestions.length}</Text>
+                    <Text style={{color: COLORS.black, fontSize: 20, opacity: 0.6, marginRight: 2}}>{currentQuestionIndex+1}</Text>
+                    <Text style={{color: COLORS.black, fontSize: 18, opacity: 0.6}}>/ {allQuestions.length}</Text>
                 </View>
 
                 {/* Question */}
                 <Text style={{
-                    color: COLORS.white,
+                    color: COLORS.black,
                     fontSize: 30
                 }}>{allQuestions[currentQuestionIndex]?.question}</Text>
+                </ScrollView>
             </View>
         )
     }
@@ -114,7 +117,7 @@ const Quiz = () => {
                             marginVertical: 10
                         }}
                         >
-                            <Text style={{fontSize: 20, color: COLORS.white}}>{option}</Text>
+                            <Text style={{fontSize: 20, color: COLORS.black}}>{option}</Text>
 
                             {/* Show Check Or Cross Icon based on correct answer*/}
                             {
@@ -228,10 +231,10 @@ const Quiz = () => {
                >
                    <View style={{
                        flex: 1,
-                       backgroundColor: COLORS.primary,
                        alignItems: 'center',
                        justifyContent: 'center'
                    }}>
+
                        <View style={{
                            backgroundColor: COLORS.white,
                            width: '90%',
@@ -273,20 +276,8 @@ const Quiz = () => {
                </Modal>
 
                {/* Background Image */}
-               <Image
-                source={require('../img/Logo.png')}
-                style={{
-                    width: SIZES.width,
-                    height: 130,
-                    zIndex: -1,
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    opacity: 0.5
-                }}
-                resizeMode={'contain'}
-                />
+
+               
 
            </View>
        </SafeAreaView>

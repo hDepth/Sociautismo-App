@@ -14,7 +14,7 @@ export default function StackRoute() {
     return (
       <NavigationContainer>
 
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
         <Stack.Screen name="Cadastro" component={Cadastro} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="TabRoutes" component={TabRoutes} />

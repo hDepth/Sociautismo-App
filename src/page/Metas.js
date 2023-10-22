@@ -25,7 +25,7 @@ import {
                   <Text style={estilos.numMeta}>
                     1
                   </Text>
-                  <Text style={estilos.textMeta}>*Meta*</Text>
+                  <Text style={estilos.textMeta}>*Metaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*</Text>
                 </View>
                 <TouchableOpacity style={estilos.botaoMeta}>
                   <Text style={estilos.textoBotao}>Concluido</Text>

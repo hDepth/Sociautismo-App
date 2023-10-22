@@ -6,36 +6,12 @@ import {
     ScrollView,
     SafeAreaView,
   } from 'react-native';
-  import React, {useContext, useEffect} from 'react';
-  import { getAuth } from "firebase/auth";
-  import { SignInContext } from '../contexts/authContext';
-  import app from "../services/firebase";
-
-
 
   import estilos from '../css/estilohome';
 
   
   export default function Home() {
 
-    
-    const {dispatchSignedIn} = useContext(SignInContext)
-
-    useEffect(()=>{
-      auth().onAuthStateChanged((user)=>{
-        if(user){
-          dispatchSignedIn({type:"UPDATE_SIGN_IN", payload:{userToken:"signed-in"}})
-        }else{
-          dispatchSignedIn({type:"UPDATE_SIGN_IN", payload:{userToken:null}})
-
-        }
-      })
-      
-    },[])
-    async function signOut() {
-      const auth = getAuth(app);
-      auth().signOut();
-    }
     return (
       <View>
       <ImageBackground
@@ -62,10 +38,6 @@ import {
   
           <TouchableOpacity style={estilos.botoesHome}>
             <Text style={estilos.textoBotoes}>Teapets</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity onPress={signOut} style={estilos.botaosair}>
-            <Text style={estilos.textosair}>Sair</Text>
           </TouchableOpacity>
           
         </View>
