@@ -6,11 +6,24 @@ import {
     ScrollView,
     SafeAreaView,
   } from 'react-native';
-
+  import { getAuth } from "firebase/auth";
+  import app from "../services/firebase";
   import estilos from '../css/estilohome';
 
   
-  export default function Home() {
+  export default function Home({navigation}) {
+
+    const auth = getAuth(app);
+
+     async function signOut(){
+
+      signOut()
+        .then(() => {
+          alert("Seção Encerrada");
+          navigation.navigate("Login");
+      })
+     }
+  
 
     return (
       <View>
@@ -41,6 +54,10 @@ import {
           </TouchableOpacity>
           
         </View>
+        <TouchableOpacity style={estilos.botoesHome}
+        onPress={signOut}>
+            <Text style={estilos.textoBotoes}>Sair</Text>
+          </TouchableOpacity>
         </ImageBackground>
       </View>
     );

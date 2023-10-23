@@ -9,6 +9,7 @@ import Cadastro from '../pages/Cadastro';
 import TabRoutes from './tab.routes';
 import RecSenha from '../pages/RecSenha';
 
+
 export default function StackRoute() {
   
     return (

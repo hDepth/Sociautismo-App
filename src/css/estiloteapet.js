@@ -33,7 +33,7 @@ const estilos = StyleSheet . create({
      borderWidth: 3,
      borderRadius: 50,
      marginTop: 70,  
-     marginLeft: 15
+     alignSelf: 'center'
    },
 
    containerTexto:{
