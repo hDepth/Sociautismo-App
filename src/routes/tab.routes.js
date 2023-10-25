@@ -8,6 +8,7 @@ import Teapet from '../page/Teapet';
 import Pictogame from '../page/Pictogame';
 import Metas from '../page/Metas';
 import Home from '../page/Home';
+import Niveis from '../page/Niveis'
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +24,7 @@ export default function TabRoute(){
     />
 
     <Tab.Screen
-    name="pictogame" component={Pictogame}
+    name="Niveis" component={Niveis}
     options={{
         tabBarIcon: ({color, size}) => <Ionicons name="game-controller" size={24} color="black" />,
         tabBarLabel: 'Jogos'

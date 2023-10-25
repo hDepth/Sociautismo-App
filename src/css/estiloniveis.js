@@ -43,7 +43,6 @@ const estilos = StyleSheet . create({
    },
 
    containersMetas: {
-    flexDirection:"column",
     backgroundColor: '#ffffff',
     borderRadius: 10, 
     height:90,
@@ -77,10 +76,15 @@ const estilos = StyleSheet . create({
     height: 10,
     backgroundColor: 'green',
     borderRadius: 3,
-    alignSelf: 'flex-end',
-    marginBottom: 10,
-    marginRight: 50,
+    alignSelf: 'flex-start',
+  },
 
+  viewview: {
+
+
+    alignSelf:'center',
+    right: 175,
+    width: '80%'
   },
 
   textMeta:{

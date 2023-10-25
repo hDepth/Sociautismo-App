@@ -96,11 +96,9 @@ const Quiz = () => {
                 <View style={{
                     alignItems: 'center',
                     flexDirection: 'row',
-                    borderWidth: 1,
                     width: '100%',
-                    height: '60%',
-                    flexWrap: 'wrap',
-                    
+                    height: '38%',
+                    flexWrap: 'wrap',  
                 }}>
                 
                 {
@@ -181,13 +179,7 @@ const Quiz = () => {
     const renderNextButton = () => {
         if(showNextButton){
             return (
-                <View style={{
-                    borderColor: 'black',
-                    borderWidth: 1,
-                    width: '100%',
-                    padding: 20,
-                    
-                }}>
+                
                 <TouchableOpacity
                 onPress={handleNext}
                 style={{
@@ -195,10 +187,11 @@ const Quiz = () => {
                      backgroundColor: COLORS.accent, 
                      padding: 20, 
                      borderRadius: 5
+                     
                 }}>
                     <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Next</Text>
                 </TouchableOpacity>
-                </View>
+                
             )
         }else{
             return null

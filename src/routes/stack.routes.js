@@ -11,6 +11,10 @@ import RecSenha from '../pages/RecSenha';
 import Personalizacao from '../page/Personalizacao';
 import Teapet from '../page/Teapet';
 import Home from '../page/Home';
+import Pictogame from '../page/Pictogame'
+import Pais from '../page/Pais'
+import Metas from '../page/Metas';
+import Niveis from '../page/Niveis';
 
 export default function StackRoute() {
   
@@ -24,6 +28,10 @@ export default function StackRoute() {
         <Stack.Screen name="RecSenha" component={RecSenha} />
         <Stack.Screen name="Personalizacao" component={Personalizacao} />
         <Stack.Screen name="TeaPet" component={Teapet} />
+        <Stack.Screen name="Pictogame" component={Pictogame} />
+        <Stack.Screen name="Pais" component={Pais} />
+        <Stack.Screen name="Metas" component={Metas} />
+        <Stack.Screen name="Niveis" component={Niveis} />
       </Stack.Navigator>
 
 </NavigationContainer>

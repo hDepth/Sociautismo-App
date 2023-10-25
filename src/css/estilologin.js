@@ -21,10 +21,12 @@ const estilos = StyleSheet.create({
   },
 
   imagemLogo: {
-    width: 'auto',
-    height: 200,
-    marginTop: 40,
-    left: 15,
+    width: "100%",
+    height: 150,
+    marginTop: 55,
+    right: 5,
+    marginBottom: 10,
+    
 
   },
 
