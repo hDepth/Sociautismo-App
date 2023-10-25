@@ -1,7 +1,7 @@
 export default data = [
     {
         question: "Dois amigos se encontram enquanto caminhavam, O que eles estão fazendo?",
-        options: ["Se cumprimentando","Se despedindo","Acenando","Conversando"],
+        options: ["Se cumprimentando","Despedindo","Acenando","Conversando"],
         correct_option: "Se cumprimentando"
     },
     {
@@ -21,7 +21,7 @@ export default data = [
     },
     {
         question: "O que os dois Amigos estão fazendo agora?",
-        options: ["Se despedindo","Caminhando juntos","discutindo","Atravessando a rua"],
+        options: ["Se despedindo","Caminhando","Discutindo","Atravessando a rua"],
         correct_option: "Se despedindo"
     }
 ]

@@ -4,18 +4,25 @@ const estilos = StyleSheet . create({
 
    area: {
     flexDirection:"column",
-    backgroundColor: '#9ea0a3',
+    backgroundColor: 'orange',
     borderRadius: 20, 
     height:90,
     width: 140,
-    marginTop: 10,
-    marginLeft: 10, 
+    marginTop: 45,
+    marginLeft: 20, 
   },
-  
+  fotoBotoes:{
+    borderRadius:10,
+    padding: 10, 
+    margin: 5, 
+    height: 80, 
+    width: 80, 
+    resizeMode: 'stretch', 
+  },
   imagemFundo:{
-    flex: 1,
     resizeMode: 'cover',
-    width: "auto",
+    width: '100%',
+    height: '100%'
   },
 
   nameArea:{
@@ -32,18 +39,74 @@ const estilos = StyleSheet . create({
   
   containerCima:{
     flexDirection:"row",
-    height:100,
-    width: 350,
+    height: 325,
+    width: 325,
     alignSelf: 'center',
     marginTop: 60,
+    flexWrap: 'wrap',
+
   },
 
-   containerBaixo:{
-    flexDirection:"row",
-    height:100,
-    width: 350,
+
+  botaopicto:{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    backgroundColor:"#fff",
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 20,
+    height:125,
+    width:120,
+    margin: 20, 
     alignSelf: 'center',
-    marginTop: 10,
+    padding: 5,
+  },
+  botaometa:{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    backgroundColor:"#fff",
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 20,
+    height:125,
+    width:120,
+    margin: 20, 
+    alignSelf: 'center',
+    padding: 5,
+  },
+  botaopais:{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    backgroundColor:"#fff",
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 20,
+    height:125,
+    width:120,
+    margin: 20, 
+    alignSelf: 'center',
+    padding: 5,
+  },
+  botaopet:{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    backgroundColor:"#fff",
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 20,
+    height:125,
+    width:120,
+    margin: 20, 
+    alignSelf: 'center',
+    padding: 5,
   },
 
   botoesHome:{
@@ -55,10 +118,11 @@ const estilos = StyleSheet . create({
     borderWidth: 1,
     borderColor: '#000',
     borderRadius: 20,
-    height:100,
-    width:100,
-    marginLeft: 45,
+    height:125,
+    width:125,
+    margin: 20, 
     alignSelf: 'center',
+    padding: 5,
   },
 
   textoBotoes:{

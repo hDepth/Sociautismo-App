@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { View, Text, SafeAreaView, StatusBar, Image, TouchableOpacity, Modal, Animated, ScrollView } from 'react-native'
 import { COLORS, SIZES } from '../constants';
 import data from '../data/PictogameData';
-import estilos from '../css/estilopictogame';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Quiz = () => {
@@ -68,7 +67,7 @@ const Quiz = () => {
     const renderQuestion = () => {
         return (
             <View style={{
-                marginVertical: 0
+                marginVertical: 0,
             }}>
                  <ScrollView style={ {marginHorizontal: 20}}>
                 {/* Question Counter */}
@@ -83,7 +82,8 @@ const Quiz = () => {
                 {/* Question */}
                 <Text style={{
                     color: COLORS.black,
-                    fontSize: 30
+                    fontSize: 20,
+                    flexDirection: 'row',
                 }}>{allQuestions[currentQuestionIndex]?.question}</Text>
                 </ScrollView>
             </View>
@@ -92,8 +92,25 @@ const Quiz = () => {
     const renderOptions = () => {
         return (
             <View>
+
+                <View style={{
+                    alignItems: 'center',
+                    flexDirection: 'row',
+                    borderWidth: 1,
+                    width: '100%',
+                    height: '60%',
+                    flexWrap: 'wrap',
+                    
+                }}>
+                
                 {
+
                     allQuestions[currentQuestionIndex]?.options.map(option => (
+                        <View style={{
+                            width: '45%',
+                            height: 85,
+                            margin: 8,
+                            }}>
                         <TouchableOpacity 
                         onPress={()=> validateAnswer(option)}
                         disabled={isOptionsDisabled}
@@ -111,14 +128,14 @@ const Quiz = () => {
                             ? COLORS.error +'20'
                             : COLORS.secondary+'20',
                             height: 60, borderRadius: 20,
+                            width: '100%',
                             flexDirection: 'row',
-                            alignItems: 'center', justifyContent: 'space-between',
-                            paddingHorizontal: 20,
+                            alignItems: 'center', justifyContent: 'center',
                             marginVertical: 10
                         }}
                         >
-                            <Text style={{fontSize: 20, color: COLORS.black}}>{option}</Text>
-
+                            <Text style={{fontSize: 14, fontWeight: 'bold', color: COLORS.black}}>{option}</Text>
+                            
                             {/* Show Check Or Cross Icon based on correct answer*/}
                             {
                                 option==correctOption ? (
@@ -131,37 +148,57 @@ const Quiz = () => {
                                             color: COLORS.white,
                                             fontSize: 20
                                         }} />
+                                        
                                     </View>
+                                    
                                 ): option == currentOptionSelected ? (
                                     <View style={{
                                         width: 30, height: 30, borderRadius: 30/2,
                                         backgroundColor: COLORS.error,
                                         justifyContent: 'center', alignItems: 'center'
-                                    }}>
+                                    }}> 
                                         <MaterialCommunityIcons name="close" style={{
                                             color: COLORS.white,
                                             fontSize: 20
                                         }} />
+                                        
                                     </View>
+                                    
                                 ) : null
                             }
 
                         </TouchableOpacity>
+                        </View>
+                        
                     ))
+                    
                 }
+                
+                </View>
             </View>
         )
     }
     const renderNextButton = () => {
         if(showNextButton){
             return (
+                <View style={{
+                    borderColor: 'black',
+                    borderWidth: 1,
+                    width: '100%',
+                    padding: 20,
+                    
+                }}>
                 <TouchableOpacity
                 onPress={handleNext}
                 style={{
-                    marginTop: 20, width: '100%', backgroundColor: COLORS.accent, padding: 20, borderRadius: 5
+                     width: '100%', 
+                     backgroundColor: COLORS.accent, 
+                     padding: 20, 
+                     borderRadius: 5
                 }}>
                     <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Next</Text>
                 </TouchableOpacity>
+                </View>
             )
         }else{
             return null

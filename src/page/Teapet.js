@@ -7,7 +7,7 @@ import {
   } from 'react-native';
   import estilos from '../css/estiloteapet';
   
-  export default function Teapet() {
+  export default function Teapet({navigation}) {
     return (
       <View>
         <View style={estilos.area}>
@@ -23,7 +23,9 @@ import {
   
   
           <View style={estilos.containerCima}>
-            <TouchableOpacity style={estilos.pets}>
+            <TouchableOpacity 
+            onPress={() => navigation.navigate("Personalizacao")}
+            style={estilos.pets}>
               <Image
                 source={require('../img/hamster.jpeg')}
                 style={estilos.fotoBotoes}
