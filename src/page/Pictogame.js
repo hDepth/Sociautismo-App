@@ -85,6 +85,16 @@ const Quiz = () => {
                     fontSize: 20,
                     flexDirection: 'row',
                 }}>{allQuestions[currentQuestionIndex]?.question}</Text>
+
+            <Image
+                source={require('../img/Pictogame.jpeg')}
+                //source={require({allQuestions[currentQuestionIndex]?.imagem})}
+                style={{
+                    width: '95%',
+                    height: 250,
+                    marginTop: 10
+                }}
+              />
                 </ScrollView>
             </View>
         )
@@ -97,7 +107,7 @@ const Quiz = () => {
                     alignItems: 'center',
                     flexDirection: 'row',
                     width: '100%',
-                    height: '38%',
+                    height: '32%',
                     flexWrap: 'wrap',  
                 }}>
                 
@@ -129,7 +139,7 @@ const Quiz = () => {
                             width: '100%',
                             flexDirection: 'row',
                             alignItems: 'center', justifyContent: 'center',
-                            marginVertical: 10
+                            marginVertical: 5
                         }}
                         >
                             <Text style={{fontSize: 14, fontWeight: 'bold', color: COLORS.black}}>{option}</Text>
@@ -186,7 +196,8 @@ const Quiz = () => {
                      width: '100%', 
                      backgroundColor: COLORS.accent, 
                      padding: 20, 
-                     borderRadius: 5
+                     borderRadius: 5,
+                     
                      
                 }}>
                     <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Next</Text>
