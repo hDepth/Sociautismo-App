@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, StatusBar, Image, TouchableOpacity, Modal, Animated, ScrollView } from 'react-native'
 import { COLORS, SIZES } from '../constants';
-import data from '../data/PictogameData';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+const allQuestions = require("../data/PictogameData");
+let imagem = allQuestions[0].imagem;
 
 const Quiz = () => {
 
-    const allQuestions = data;
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [currentOptionSelected, setCurrentOptionSelected] = useState(null);
     const [correctOption, setCorrectOption] = useState(null);
@@ -38,6 +39,8 @@ const Quiz = () => {
             setCorrectOption(null);
             setIsOptionsDisabled(false);
             setShowNextButton(false);
+            console.log("entrou" + imagem);
+            imagem = allQuestions[currentQuestionIndex + 1]?.imagem;
         }
         Animated.timing(progress, {
             toValue: currentQuestionIndex+1,
@@ -65,6 +68,7 @@ const Quiz = () => {
 
 
     const renderQuestion = () => {
+    console.log(imagem);
         return (
             <View style={{
                 marginVertical: 0,
@@ -84,17 +88,16 @@ const Quiz = () => {
                     color: COLORS.black,
                     fontSize: 20,
                     flexDirection: 'row',
-                }}>{allQuestions[currentQuestionIndex]?.question}</Text>
+                }}>{allQuestions[currentQuestionIndex]?.question}</Text>{""}
 
-            <Image
-                source={require('../img/Pictogame.jpeg')}
-                //source={require({allQuestions[currentQuestionIndex]?.imagem})}
+            <img
                 style={{
                     width: '95%',
                     height: 250,
                     marginTop: 10
                 }}
-              />
+                src={imagem}
+              ></img>
                 </ScrollView>
             </View>
         )
