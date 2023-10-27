@@ -21,7 +21,6 @@ const estilos = StyleSheet . create({
   
   arearea: {
     width: '100%',
-    borderWidth: 1,
     height: '50%',
     marginTop: 50,
 
@@ -31,15 +30,16 @@ const estilos = StyleSheet . create({
     backgroundColor: '#ffffff',
     borderRadius: 20, 
     height:90,
-    width: 140,
+    width: 160,
     marginTop: 40,
     marginLeft: 10, 
+    justifyContent: 'center'
   },
   titleArea:{
     color:'#000000',
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: 'bold',
-    margin: 20,
+    alignSelf: 'center'
    },
 
    containersMetas: {
@@ -55,7 +55,6 @@ const estilos = StyleSheet . create({
   boxnumMeta: {
     flexDirection:"row",
     backgroundColor: '#03d1ff',
-    borderColor: 'black',
     borderRadius: 10, 
     height:50,
     width: 50,
@@ -80,8 +79,6 @@ const estilos = StyleSheet . create({
   },
 
   viewview: {
-
-
     alignSelf:'center',
     right: 175,
     width: '80%'

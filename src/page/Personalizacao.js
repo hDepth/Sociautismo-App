@@ -1,8 +1,22 @@
+import React, { useState } from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import estilos from '../css/estiloperso';
 
+
+
+
+
+
+
 export default function Personalizacao({navigation}) {
+
+
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const Imagens = require("../data/TeaPetData");
+let imagempet = Imagens[0].imagempet;
+
+
   return (
     <View>
       <View style={estilos.area}>

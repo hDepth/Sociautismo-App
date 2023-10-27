@@ -15,6 +15,8 @@ import Pictogame from '../page/Pictogame'
 import Pais from '../page/Pais'
 import Metas from '../page/Metas';
 import Niveis from '../page/Niveis';
+import FeedBack from '../page/Feedback';
+import Config from '../page/Config';
 
 export default function StackRoute() {
   
@@ -32,6 +34,8 @@ export default function StackRoute() {
         <Stack.Screen name="Pais" component={Pais} />
         <Stack.Screen name="Metas" component={Metas} />
         <Stack.Screen name="Niveis" component={Niveis} />
+        <Stack.Screen name="FeedBack" component={FeedBack} />
+        <Stack.Screen name="Config" component={Config} />
       </Stack.Navigator>
 
 </NavigationContainer>

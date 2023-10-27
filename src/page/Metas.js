@@ -27,7 +27,8 @@ export default function Metas({navigation}) {
 
             <View style={estilos.arearea}>
             <View style={estilos.containersMetas}>
-              <TouchableOpacity style={estilos.boxnumMeta}>
+              <TouchableOpacity style={estilos.boxnumMeta}
+              onPress={() => navigation.navigate("FeedBack")}>
                 <Text style={estilos.numMeta}>
                   1
                 </Text>
