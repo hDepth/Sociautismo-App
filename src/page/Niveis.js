@@ -43,147 +43,84 @@ import {
               </View>
   
               <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
+                <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("Pictogame")}>
                   <Text style={estilos.numMeta}>
                     2
                   </Text>
-                  <View>
+                </TouchableOpacity>
+                <View>
                 <Text style={estilos.textMeta}>Que tal um abraço?</Text>
                 </View>
 
                 <View style={estilos.viewview}>
                 <View style={estilos.barradeprogresso}></View>
                 </View>
-                </View>
-                
               </View>
-  
               <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
+                <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("Pictogame")}>
                   <Text style={estilos.numMeta}>
                     3
                   </Text>
-                  <View>
+                </TouchableOpacity>
+                <View>
                 <Text style={estilos.textMeta}>Que tal um abraço?</Text>
                 </View>
 
                 <View style={estilos.viewview}>
                 <View style={estilos.barradeprogresso}></View>
                 </View>
-                </View>
-               
               </View>
-  
               <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
+                <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("Pictogame")}>
                   <Text style={estilos.numMeta}>
                     4
                   </Text>
-                  <View>
+                </TouchableOpacity>
+                <View>
                 <Text style={estilos.textMeta}>Que tal um abraço?</Text>
                 </View>
 
                 <View style={estilos.viewview}>
                 <View style={estilos.barradeprogresso}></View>
                 </View>
-                </View>
-                
               </View>
-  
               <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
+                <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("Pictogame")}>
                   <Text style={estilos.numMeta}>
                     5
                   </Text>
-                  <View>
+                </TouchableOpacity>
+                <View>
                 <Text style={estilos.textMeta}>Que tal um abraço?</Text>
                 </View>
 
                 <View style={estilos.viewview}>
                 <View style={estilos.barradeprogresso}></View>
                 </View>
-                </View>
               </View>
-              
               <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
+                <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("Pictogame")}>
                   <Text style={estilos.numMeta}>
                     6
                   </Text>
-                  <View>
+                </TouchableOpacity>
+                <View>
                 <Text style={estilos.textMeta}>Que tal um abraço?</Text>
                 </View>
 
                 <View style={estilos.viewview}>
                 <View style={estilos.barradeprogresso}></View>
                 </View>
-                </View>
-                
               </View>
               
-              <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
-                  <Text style={estilos.numMeta}>
-                    7
-                  </Text>
-                  <View>
-                <Text style={estilos.textMeta}>Que tal um abraço?</Text>
-                </View>
-
-                <View style={estilos.viewview}>
-                <View style={estilos.barradeprogresso}></View>
-                </View>
-                </View>
+            
                 
-              </View>
-              
-              <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
-                  <Text style={estilos.numMeta}>
-                    8
-                  </Text>
-                  <View>
-                <Text style={estilos.textMeta}>Que tal um abraço?</Text>
-                </View>
-
-                <View style={estilos.viewview}>
-                <View style={estilos.barradeprogresso}></View>
-                </View>
-                </View>
-                
-              </View>
-              
-              <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
-                  <Text style={estilos.numMeta}>
-                    9
-                  </Text>
-                  <View>
-                <Text style={estilos.textMeta}>Que tal um abraço?</Text>
-                </View>
-
-                <View style={estilos.viewview}>
-                <View style={estilos.barradeprogresso}></View>
-                </View>
-                </View>
-                
-              </View>
-              
-              <View style={estilos.containersMetas}>
-                <View style={estilos.boxnumMeta}>
-                  <Text style={estilos.numMeta}>
-                    10
-                  </Text>
-                  <View>
-                <Text style={estilos.textMeta}>Que tal um abraço?</Text>
-                </View>
-
-                <View style={estilos.viewview}>
-                <View style={estilos.barradeprogresso}></View>
-                </View>
-                </View>
-                
-              </View>
+            
 
               </View>
               

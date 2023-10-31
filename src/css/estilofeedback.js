@@ -15,7 +15,7 @@ const estilos = StyleSheet . create({
     width: 180,
     marginTop: 25,
     marginLeft: 5, 
-    padding:'10px',
+    padding: 10,
   },
 
   containerRow:{

@@ -2,37 +2,22 @@ import {StyleSheet} from 'react-native';
 
 const estilos = StyleSheet . create({
 
-   container: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-
-  containerPrincipal:{
-    flexDirection: "column",
-  },
-
+ 
   imagemFundo:{
-    flex: 1,
     resizeMode: 'cover',
-    width: "auto",
-    height: "auto",
+    width: '100%',
+    height: '100%'
   },
 
   
-  arearea: {
-    width: '100%',
-    borderWidth: 1,
-    height: '50%',
-    marginTop: 50,
-
-  },
+  
   area: {
     flexDirection:"row",
     backgroundColor: '#ffffff',
     borderRadius: 20, 
     height:90,
     width: 140,
-    marginTop: 40,
+    marginTop: 10,
     marginLeft: 10, 
   },
   titleArea:{
@@ -43,51 +28,50 @@ const estilos = StyleSheet . create({
    },
 
    containersMetas: {
-    flexDirection:"column",
+    flexDirection:"row",
     backgroundColor: '#ffffff',
     borderRadius: 10, 
     height:90,
     width: 300,
     alignSelf: 'center',
-    marginTop: 10,
-    flexDirection: 'row',
+    alignItems:'center',
+    marginTop: 45,
   },
 
   boxnumMeta: {
     flexDirection:"row",
+    justifyContent: 'center',
     backgroundColor: '#03d1ff',
     borderColor: 'black',
     borderRadius: 10, 
     height:50,
     width: 50,
     marginLeft: 10, 
-    alignSelf: 'center'
-    
   },
 
   numMeta: {
     fontSize: 30,
-    marginLeft: 17,
-    marginTop: 3,
+    alignSelf: 'center',
+    fontWeight: 'bold'
     
   },
-  barradeprogresso: {
 
-    width: '80%',
-    height: 10,
-    backgroundColor: 'green',
-    borderRadius: 3,
-    alignSelf: 'flex-end',
-    marginBottom: 10,
-    marginRight: 50,
+  containerColumn:{
+    width:240,
+    height:90,
+    
+  },
 
+  containerTmetas:{
+    height:90,
+    width:240,
+    alignItems:'center',
   },
 
   textMeta:{
    marginLeft: 25,
-   fontSize: 20,
-   alignSelf: 'center',
-   marginBottom: 20,
+   marginTop: 30,
+   alignSelf: 'baseline',
   },
 
   botaoMeta:{
@@ -95,8 +79,7 @@ const estilos = StyleSheet . create({
     marginBottom: 5,
     marginLeft: 65,
     borderRadius: 20,
-    padding: 10,
-    alignSelf: 'center',
+    marginRight: 100
   },
 
   textoBotao:{
@@ -104,9 +87,8 @@ const estilos = StyleSheet . create({
     fontSize: 10,
     fontWeight:'bold',
     alignSelf: 'center',
-  }
+  },
    
-
   
 })
 

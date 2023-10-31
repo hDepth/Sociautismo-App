@@ -34,7 +34,7 @@ export default function FeedBack({navigation}) {
           <Text style={estilos.titleArea}>bla bla bla </Text>
         </View>
         <View>
-          <Image style={estilos.figura} source={require('../img/hamster.jpeg')} />
+          <Image style={estilos.figura} source={require('../img/pet16.png')} />
         </View>
       </View>
 

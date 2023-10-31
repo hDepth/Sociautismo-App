@@ -45,7 +45,7 @@ import {
               source={require('../img/MontanhaLaranja.jpeg')}
               style={estilos.imagemFundo}>
         <View style={estilos.area}>
-          <Text style={estilos.nameArea}>Oi Fulano</Text>
+          <Text style={estilos.nameArea}>Oi " "</Text>
            <Text style={estilos.textArea}>O que deseja fazer</Text>
         </View>
 

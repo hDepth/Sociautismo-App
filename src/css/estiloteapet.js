@@ -4,14 +4,20 @@ const estilos = StyleSheet . create({
 
    area: {
     flexDirection:"column",
-    backgroundColor: '#fff',
+    backgroundColor: 'orange',
     borderWidth: 2,
     borderColor: '#000',
     borderRadius: 20, 
     height:90,
     width: 140,
-    marginTop: 10,
+    marginTop: 40,
     marginLeft: 10, 
+  },
+
+  imagemFundo:{
+    resizeMode: 'cover',
+    width: '100%',
+    height: '100%'
   },
 
   nameArea:{
@@ -32,7 +38,7 @@ const estilos = StyleSheet . create({
      width: 330,
      borderWidth: 3,
      borderRadius: 50,
-     marginTop: 70,  
+     marginTop: 50,  
      alignSelf: 'center'
    },
 

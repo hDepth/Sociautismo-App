@@ -43,7 +43,6 @@ const estilos = StyleSheet . create({
    },
 
    containersMetas: {
-    backgroundColor: '#ffffff',
     borderRadius: 10, 
     height:90,
     width: 300,
@@ -53,20 +52,19 @@ const estilos = StyleSheet . create({
   },
 
   boxnumMeta: {
-    flexDirection:"row",
-    backgroundColor: '#03d1ff',
+    backgroundColor: 'white',
+    borderColor: 'black',
+    borderWidth: 2,
     borderRadius: 10, 
-    height:50,
-    width: 50,
-    marginLeft: 10, 
-    alignSelf: 'center'
+    height:70,
+    width: 70, 
+    justifyContent: 'center'
     
   },
 
   numMeta: {
     fontSize: 30,
-    marginLeft: 17,
-    marginTop: 3,
+    alignSelf: 'center'
     
   },
   barradeprogresso: {
@@ -89,6 +87,8 @@ const estilos = StyleSheet . create({
    fontSize: 20,
    alignSelf: 'center',
    marginBottom: 20,
+   fontWeight: 'bold',
+   backgroundColor: '#fff'
   },
 
   botaoMeta:{

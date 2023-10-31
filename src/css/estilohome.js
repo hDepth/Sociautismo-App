@@ -52,7 +52,7 @@ const estilos = StyleSheet . create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex',
     backgroundColor:"#fff",
     borderWidth: 1,
     borderColor: '#000',
@@ -67,7 +67,7 @@ const estilos = StyleSheet . create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex',
     backgroundColor:"#fff",
     borderWidth: 1,
     borderColor: '#000',
@@ -82,7 +82,7 @@ const estilos = StyleSheet . create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex',
     backgroundColor:"#fff",
     borderWidth: 1,
     borderColor: '#000',
@@ -97,7 +97,7 @@ const estilos = StyleSheet . create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex',
     backgroundColor:"#fff",
     borderWidth: 1,
     borderColor: '#000',
@@ -113,7 +113,7 @@ const estilos = StyleSheet . create({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex',
     backgroundColor:"#fff",
     borderWidth: 1,
     borderColor: '#000',
@@ -127,10 +127,7 @@ const estilos = StyleSheet . create({
 
   textoBotoes:{
     fontSize: 18,
-    textAlign: 'center-end',
+    textAlign: 'center',
   }
-
-
-
 })
 export default estilos;

@@ -10,7 +10,6 @@ import TabRoutes from './tab.routes';
 import RecSenha from '../pages/RecSenha';
 import Personalizacao from '../page/Personalizacao';
 import Teapet from '../page/Teapet';
-import Home from '../page/Home';
 import Pictogame from '../page/Pictogame'
 import Pais from '../page/Pais'
 import Metas from '../page/Metas';
