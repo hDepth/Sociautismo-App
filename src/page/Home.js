@@ -88,6 +88,14 @@ import {
           </TouchableOpacity>
 
           </View>
+          <TouchableOpacity style={estilos.botaopet}
+          onPress={() => navigation.navigate("Teste")}>
+            <Text style={estilos.textoBotoes}>Teapets</Text>
+            <Image
+                source={require('../img/Teapet.jpeg')}
+                style={estilos.fotoBotoes}
+              />
+          </TouchableOpacity>
 
         </ImageBackground>
       </View>
