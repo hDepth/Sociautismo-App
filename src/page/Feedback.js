@@ -1,9 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {ScrollView, SafeAreaView, View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import estilos from '../css/estilofeedback';
+import { Audio } from 'expo-av';
 
 export default function FeedBack({navigation}) {
   const [feedback, setFeedback] = useState("")
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [sound, setSound] = useState(null);
+
+  useEffect(() => {
+    const loadSound = async () => {
+      const { sound } = await Audio.Sound.createAsync(
+        require('../audios/Lucas.mp3') 
+      );
+      setSound(sound);
+    };
+
+    loadSound();
+
+    return () => {
+      if (sound) {
+        sound.unloadAsync();
+      }
+    };
+  }, []);
+
+  const playSound = async () => {
+    if (sound) {
+      if (isPlaying) {
+        await sound.stopAsync();
+      } else {
+        await sound.playAsync();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+
 
   return (
      <ScrollView scrollEnabled>
@@ -31,10 +64,21 @@ export default function FeedBack({navigation}) {
       </View>
       <View style={estilos.containerRow}>
         <View style={estilos.area}>
-          <Text style={estilos.titleArea}>bla bla bla </Text>
+          <Text style={estilos.titleArea}>
+            Olá Lucas! Que tal você tentar dar um abração em um coleguinha da escola? 
+            mas cuidado pergunte se ele quer um primeiro em! </Text>
         </View>
         <View>
           <Image style={estilos.figura} source={require('../img/pet16.png')} />
+          <TouchableOpacity 
+          style={estilos.botaosom}
+          onPress={playSound}>
+            <Image
+                source={require('../img/som.png')}
+                style={estilos.fotoBotoes}
+              />
+         <Text>{isPlaying ? 'll' : '>'}</Text>
+      </TouchableOpacity>
         </View>
       </View>
 

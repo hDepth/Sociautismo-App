@@ -16,7 +16,7 @@ import Metas from '../page/Metas';
 import Niveis from '../page/Niveis';
 import FeedBack from '../page/Feedback';
 import Config from '../page/Config';
-import Teste from '../page/teste';
+import Musica from '../page/Musica';
 
 
 export default function StackRoute() {
@@ -36,7 +36,7 @@ export default function StackRoute() {
         <Stack.Screen name="Metas" component={Metas} />
         <Stack.Screen name="Niveis" component={Niveis} />
         <Stack.Screen name="FeedBack" component={FeedBack} />
-        <Stack.Screen name="Teste" component={Teste} />
+        <Stack.Screen name="Musica" component={Musica} />
         <Stack.Screen name="Config" component={Config} />
 
       </Stack.Navigator>

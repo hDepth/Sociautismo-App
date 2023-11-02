@@ -11,7 +11,7 @@ const estilos = StyleSheet . create({
     flexDirection:"row",
     backgroundColor: '#ffffff',
     borderRadius: 20, 
-    height:100,
+    height:150,
     width: 180,
     marginTop: 25,
     marginLeft: 5, 
@@ -66,6 +66,26 @@ const estilos = StyleSheet . create({
      fontWeight:'bold',
      color:'red',
    },
+   botaosom: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex',
+    backgroundColor:"#fff",
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 20,
+    height:35,
+    width:35, 
+    alignSelf: 'center',
+   },
+
+   fotoBotoes: {
+  
+      alignSelf: 'center',
+      height: 30, 
+      width: 30,
+   },
    
   containerColumn:{
     width:240,
@@ -75,26 +95,28 @@ const estilos = StyleSheet . create({
   textMeta:{
    marginLeft: 25,
    alignSelf: 'center',
+   fontSize: 20
   },
 
   figura:{
     height: 150,
     width: 150,
     borderRadius:20,
-    marginLeft: 20,
+    marginLeft: 10,
 
     marginTop: 10
   },
 
   titleArea:{
 
-    alignSelf: 'center'
+    alignSelf: 'center',
+    fontSize: 15,
 
   },
   caixaFeedback:{
     flexDirection:'column',
-    width:300,
-    height:300,
+    width:275,
+    height:275,
     borderColor:'#000',
     backgroundColor: '#ffffff',
     borderWidth: 2,
