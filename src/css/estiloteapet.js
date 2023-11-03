@@ -4,7 +4,7 @@ const estilos = StyleSheet . create({
 
    area: {
     flexDirection:"column",
-    backgroundColor: 'orange',
+    backgroundColor: 'white',
     borderWidth: 2,
     borderColor: '#000',
     borderRadius: 20, 
@@ -12,6 +12,34 @@ const estilos = StyleSheet . create({
     width: 140,
     marginTop: 40,
     marginLeft: 10, 
+  },
+
+  areabotoes: {
+    flexDirection:"row",
+    borderRadius: 20, 
+    height:160,
+    width: 160,
+    marginLeft: 10, 
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    marginLeft: 25,
+    marginTop: 35,
+    marginBottom: -20
+  },
+  botoesfundo: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex',
+    backgroundColor:"#fff",
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 20,
+    height:60,
+    width:60, 
+    alignSelf: 'center',
+    marginLeft: 10,
+    marginTop: 10,
   },
 
   imagemFundo:{

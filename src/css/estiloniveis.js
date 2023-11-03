@@ -9,6 +9,7 @@ const estilos = StyleSheet . create({
 
   containerPrincipal:{
     flexDirection: "column",
+    
   },
 
   imagemFundo:{
@@ -22,7 +23,7 @@ const estilos = StyleSheet . create({
   arearea: {
     width: '100%',
     height: '50%',
-    marginTop: 50,
+    marginTop: 10,
 
   },
   area: {
@@ -31,10 +32,37 @@ const estilos = StyleSheet . create({
     borderRadius: 20, 
     height:90,
     width: 160,
-    marginTop: 40,
+    marginTop: 5,
+    borderWidth: 1,
     marginLeft: 10, 
     justifyContent: 'center'
   },
+  areabotoes: {
+    flexDirection:"row",
+    borderRadius: 20, 
+    height:160,
+    width: 160,
+    marginLeft: 10, 
+    justifyContent: 'center',
+    flexWrap: 'wrap'
+  },
+  botoesfundo: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex',
+    backgroundColor:"#fff",
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 20,
+    height:60,
+    width:60, 
+    alignSelf: 'center',
+    marginLeft: 10,
+    marginTop: 10,
+
+  },
+
   titleArea:{
     color:'#000000',
     fontSize: 30,

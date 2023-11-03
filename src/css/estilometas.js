@@ -9,7 +9,31 @@ const estilos = StyleSheet . create({
     height: '100%'
   },
 
-  
+  areabotoes: {
+    flexDirection:"row",
+    borderRadius: 20, 
+    height:160,
+    width: 160,
+    marginLeft: 10, 
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    marginLeft: 25,
+  },
+  botoesfundo: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex',
+    backgroundColor:"#fff",
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 20,
+    height:60,
+    width:60, 
+    alignSelf: 'center',
+    marginLeft: 10,
+    marginTop: 10,
+  },
   
   area: {
     flexDirection:"row",

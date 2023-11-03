@@ -17,7 +17,8 @@ import Niveis from '../page/Niveis';
 import FeedBack from '../page/Feedback';
 import Config from '../page/Config';
 import Musica from '../page/Musica';
-
+import Teste1 from '../page/Testes1';
+import Teste2 from '../page/Testes2';
 
 export default function StackRoute() {
   
@@ -37,6 +38,8 @@ export default function StackRoute() {
         <Stack.Screen name="Niveis" component={Niveis} />
         <Stack.Screen name="FeedBack" component={FeedBack} />
         <Stack.Screen name="Musica" component={Musica} />
+        <Stack.Screen name="Teste1" component={Teste1} />
+        <Stack.Screen name="Teste2" component={Teste2} />
         <Stack.Screen name="Config" component={Config} />
 
       </Stack.Navigator>

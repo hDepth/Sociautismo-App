@@ -6,16 +6,86 @@ import {
     TouchableOpacity,
   } from 'react-native';
   import estilos from '../css/estiloteapet';
+  import React, {useState} from 'react';
   
   export default function Teapet({navigation}) {
+
+    const [backgroundImage, setBackgroundImage] = useState(require('../img/Rectangle.jpg'));
+
+  const changeBackground1 = () => {
+    setBackgroundImage(require('../img/MontanhaLaranja.jpeg'));
+  };
+  const changeBackground2 = () => {
+    setBackgroundImage(require('../img/FlorestaLaranja.jpeg'));
+  };
+  const changeBackground3 = () => {
+    setBackgroundImage(require('../img/Espaço.jpeg'));
+  };
+  const changeBackground4 = () => {
+    setBackgroundImage(require('../img/Rectangle.jpg'));
+  };
+
+
     return (
+      <ImageBackground source={backgroundImage} style={{ flex: 1 }}>
       <View>
-        <ImageBackground
-              source={require('../img/MontanhaLaranja.jpeg')}
-              style={estilos.imagemFundo}>
+
+      <View style={{
+              flexWrap: 'wrap',
+              flexDirection: 'row',
+              marginTop: 1,
+          }}>
         <View style={estilos.area}>
           <Text style={estilos.nameArea}>Oi " "</Text>
           <Text style={estilos.textArea}>O que deseja fazer</Text>
+        </View>
+
+        <View style={estilos.areabotoes}>
+                
+              <TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground1}>
+            <Image
+                source={require('../img/MontanhaLaranja.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                borderRadius: 20,                            
+              }}/></TouchableOpacity>
+
+<TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground2}>
+            <Image
+                source={require('../img/FlorestaLaranja.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                borderRadius: 20,                            
+              }}/></TouchableOpacity>
+
+<TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground3}>
+            <Image
+                source={require('../img/Espaço.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                borderRadius: 20,                            
+              }}/></TouchableOpacity>
+
+<TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground4}>
+            <Image
+                source={require('../img/Rectangle.jpg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                borderRadius: 20,                            
+              }}/></TouchableOpacity>
+              </View>
         </View>
   
         <View style={estilos.container}>
@@ -104,8 +174,9 @@ import {
           </TouchableOpacity>
           </View>
         </View>
-        </ImageBackground>
+        
       </View>
+      </ImageBackground>
     );
   }
   

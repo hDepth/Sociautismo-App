@@ -3,13 +3,15 @@ import {StyleSheet} from 'react-native';
 const estilos = StyleSheet . create({
 
    area: {
-    flexDirection:"column",
-    backgroundColor: 'orange',
+    borderWidth: 2,
+    backgroundColor: 'white',
+    borderColor: '#000',
     borderRadius: 20, 
     height:90,
     width: 140,
-    marginTop: 45,
-    marginLeft: 20, 
+    marginTop: 40,
+    marginLeft: 10, 
+    marginBottom: -15,
   },
   fotoBotoes:{
     borderRadius:10,
@@ -128,6 +130,30 @@ const estilos = StyleSheet . create({
   textoBotoes:{
     fontSize: 18,
     textAlign: 'center',
-  }
+  },
+  viewfundos: {
+    width: 300,
+    height: 75,
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    padding: 5,
+    marginTop: 15,
+    alignSelf: 'center'
+  },
+  botoesfundo: {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'flex',
+  backgroundColor:"#fff",
+  borderWidth: 1,
+  borderColor: '#000',
+  borderRadius: 20,
+  height:60,
+  width:60, 
+  alignSelf: 'center',
+  marginLeft: 10,
+}
+
 })
 export default estilos;
