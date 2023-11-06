@@ -6,7 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 const allQuestions = require("../data/PictogameData");
 let imagem = allQuestions[0].imagem;
 
-const Quiz = () => {
+const Quiz = (navigation) => {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [currentOptionSelected, setCurrentOptionSelected] = useState(null);
@@ -65,6 +65,10 @@ const Quiz = () => {
         }).start();
     }
 
+    const goBack =() => {
+        () => navigation.navigate("Niveis")
+    }
+
 
 
     const renderQuestion = () => {
@@ -90,14 +94,15 @@ const Quiz = () => {
                     flexDirection: 'row',
                 }}>{allQuestions[currentQuestionIndex]?.question}</Text>{""}
 
-            <img
-                style={{
-                    width: '95%',
-                    height: 250,
-                    marginTop: 10
-                }}
-                src={imagem}
-              ></img>
+
+             <Image 
+             style={{
+             width: '95%',
+             height: 250,
+             marginTop: 10,
+             }}
+             source={imagem}></Image>
+           
                 </ScrollView>
             </View>
         )
@@ -256,7 +261,7 @@ const Quiz = () => {
            }}>
 
                {/* ProgressBar */}
-               { renderProgressBar() }
+               {renderProgressBar()}
 
                {/* Question */}
                {renderQuestion()}
@@ -286,7 +291,7 @@ const Quiz = () => {
                            padding: 20,
                            alignItems: 'center'
                        }}>
-                           <Text style={{fontSize: 30, fontWeight: 'bold'}}>{ score> (allQuestions.length/2) ? 'Congratulations!' : 'Oops!' }</Text>
+                           <Text style={{fontSize: 30, fontWeight: 'bold'}}>{ score> (allQuestions.length/2) ? 'Parabéns!' : 'Oops!' }</Text>
 
                            <View style={{
                                flexDirection: 'row',
@@ -312,6 +317,16 @@ const Quiz = () => {
                                <Text style={{
                                    textAlign: 'center', color: COLORS.white, fontSize: 20
                                }}>Retry Quiz</Text>
+                           </TouchableOpacity>
+                           <TouchableOpacity
+                           onPress={goBack}
+                           style={{
+                               backgroundColor: COLORS.accent,
+                               padding: 20, width: '100%', borderRadius: 20, marginTop: 10,
+                           }}>
+                               <Text style={{
+                                   textAlign: 'center', color: COLORS.white, fontSize: 20
+                               }}>Voltar Para os Níveis</Text>
                            </TouchableOpacity>
 
                        </View>
