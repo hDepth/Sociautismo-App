@@ -22,9 +22,8 @@ const estilos = StyleSheet . create({
   
   arearea: {
     width: '100%',
-    height: '50%',
+    height: '60%',
     marginTop: 10,
-
   },
   area: {
     flexDirection:"row",

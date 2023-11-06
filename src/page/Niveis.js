@@ -23,7 +23,6 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image
 
 
     return (
-      <ScrollView scrollEnabled>
 
         <ImageBackground source={backgroundImage} style={{ flex: 1 }}>
           
@@ -91,6 +90,7 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image
               
 
               <View style={estilos.arearea}>
+                <ScrollView>
               <View style={estilos.containersMetas}>
                 <TouchableOpacity style={estilos.boxnumMeta}
                 onPress={() => navigation.navigate("Pictogame")}>
@@ -181,17 +181,14 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image
                 <View style={estilos.viewview}>
                 <View style={estilos.barradeprogresso}></View>
                 </View>
-              </View>
-              
-            
                 
-            
-
+              </View>
+              </ScrollView>
+              
               </View>
               
          
         </View>
         </ImageBackground>
-      </ScrollView>
     );
   }

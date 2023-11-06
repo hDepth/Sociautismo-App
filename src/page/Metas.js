@@ -20,7 +20,7 @@ export default function Metas({navigation}) {
   };
 
   return (
-    <ScrollView scrollEnabled>
+    
       <ImageBackground source={backgroundImage} style={{ flex: 1 }}>
 
       <View>
@@ -85,6 +85,8 @@ export default function Metas({navigation}) {
 
             </View>
             
+            <View style={estilos.arearea}>
+            <ScrollView scrollEnabled>
             <View style={estilos.containersMetas}>
               <View style={estilos.boxnumMeta}>
               <TouchableOpacity style={estilos.boxnumMeta}
@@ -152,11 +154,13 @@ export default function Metas({navigation}) {
                 </View>
               </View>
             </View>
+            </ScrollView>
+            </View>
             
           
         
       </View>
       </ImageBackground>
-    </ScrollView>
+    
   );
 }

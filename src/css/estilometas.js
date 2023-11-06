@@ -8,7 +8,11 @@ const estilos = StyleSheet . create({
     width: '100%',
     height: '100%'
   },
-
+  arearea: {
+    width: '100%',
+    height: '65%',
+    marginTop: 10,
+  },
   areabotoes: {
     flexDirection:"row",
     borderRadius: 20, 
