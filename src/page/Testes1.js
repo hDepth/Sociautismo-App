@@ -1,132 +1,66 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button, ImageBackground, TouchableOpacity, Image } from 'react-native';
+import { View, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
+const buttons = [
+  {
+    label: 'Coroa',
+    image: require('../img/Coroa.jpeg'),
+  },
+  {
+    label: 'Laço',
+    image: require('../img/Laço.jpeg'),
+  },
+  {
+    label: 'Boina',
+    image: require('../img/boina.jpeg'),
+  },
+  {
+    label: 'Fones De Ouvido',
+    image: require('../img/headphone.jpeg'),
+  },
+  {
+    label: 'Cartola',
+    image: require('../img/cartola.jpeg'),
+  },
+];
 
+const Teste1 = () => {
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
+  const currentButton = buttons[activeButtonIndex];
 
-
-export default function Teste1({navigation}) {
-
-  const [backgroundImage, setBackgroundImage] = useState(require('../img/Rectangle.jpg'));
-
-  const changeBackground1 = () => {
-    setBackgroundImage(require('../img/MontanhaLaranja.jpeg'));
-  };
-  const changeBackground2 = () => {
-    setBackgroundImage(require('../img/FlorestaLaranja.jpeg'));
-  };
-  const changeBackground3 = () => {
-    setBackgroundImage(require('../img/Espaço.jpeg'));
-  };
-  const changeBackground4 = () => {
-    setBackgroundImage(require('../img/Rectangle.jpg'));
+  const changeImage = () => {
+    setActiveButtonIndex((activeButtonIndex + 1) % buttons.length);
   };
 
   return (
-    <ImageBackground source={backgroundImage} style={{ flex: 1 }}>
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        
-        <View style={{
-          width: 300,
-          height: 75,
-          flexWrap: 'wrap',
-          borderWidth: 1,
-          flexDirection: 'row',
-          padding: 5
-
-        }}>
-      <TouchableOpacity 
-          style={{display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'flex',
-          backgroundColor:"#fff",
-          borderWidth: 1,
-          borderColor: '#000',
-          borderRadius: 20,
-          height:60,
-          width:60, 
-          alignSelf: 'center',
-          marginLeft: 10,
-        }}
-          onPress={changeBackground1}>
-            <Image
-                source={require('../img/MontanhaLaranja.jpeg')}
-                style={{alignSelf: 'center',
-                height: '100%', 
-                width: '100%',
-                borderRadius: 20,                            
-              }}/></TouchableOpacity>
-
-<TouchableOpacity 
-          style={{display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'flex',
-          backgroundColor:"#fff",
-          borderWidth: 1,
-          borderColor: '#000',
-          borderRadius: 20,
-          height:60,
-          width:60, 
-          marginLeft: 10,
-          alignSelf: 'center',}}
-          onPress={changeBackground2}>
-            <Image
-                source={require('../img/FlorestaLaranja.jpeg')}
-                style={{alignSelf: 'center',
-                height: '100%', 
-                width: '100%',
-                borderRadius: 20,                            
-              }}/></TouchableOpacity>
-
-<TouchableOpacity 
-          style={{display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'flex',
-          backgroundColor:"#fff",
-          borderWidth: 1,
-          borderColor: '#000',
-          borderRadius: 20,
-          height:60,
-          width:60, 
-          marginLeft: 10,
-          alignSelf: 'center',}}
-          onPress={changeBackground3}>
-            <Image
-                source={require('../img/Espaço.jpeg')}
-                style={{alignSelf: 'center',
-                height: '100%', 
-                width: '100%',
-                borderRadius: 20,                            
-              }}/></TouchableOpacity>
-
-<TouchableOpacity 
-          style={{display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'flex',
-          backgroundColor:"#fff",
-          borderWidth: 1,
-          borderColor: '#000',
-          borderRadius: 20,
-          height:60,
-          width:60, 
-          marginLeft: 10,
-          alignSelf: 'center',}}
-          onPress={changeBackground4}>
-            <Image
-                source={require('../img/Rectangle.jpg')}
-                style={{alignSelf: 'center',
-                height: '100%', 
-                width: '100%',
-                borderRadius: 20,                            
-              }}/></TouchableOpacity>
-
-</View>
-              
-        
-      </View>
-    </ImageBackground>
+    <View style={styles.container}>
+      <Image source={currentButton.image} style={styles.image} />
+      <Text>{currentButton.label}</Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={changeImage}>
+        <Text>Próximo Botão</Text>
+      </TouchableOpacity>
+    </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  image: {
+    width: 200,
+    height: 200,
+  },
+  button: {
+    marginTop: 20,
+    backgroundColor: 'blue',
+    padding: 10,
+    borderRadius: 5,
+  },
+});
+
+export default Teste1;

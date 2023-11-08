@@ -124,7 +124,7 @@ import {
           <View style={estilos.containerMeio}>
           <TouchableOpacity style={estilos.pets}>
            <Image
-              source={require('../img/pet5.0.png')}
+              source={require('../img/pet5.png')}
               style={estilos.fotoBotoes}
             />
           </TouchableOpacity>

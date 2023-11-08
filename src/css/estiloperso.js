@@ -3,15 +3,20 @@ import {StyleSheet} from 'react-native';
 const estilos = StyleSheet . create({
 
    area: {
-    flexDirection:"column",
     backgroundColor: '#fff',
     borderWidth: 2,
     borderColor: '#000',
     borderRadius: 20, 
     height:90,
     width: 140,
-    marginTop: 10,
+    marginTop: 40,
     marginLeft: 10, 
+  },
+
+  imagemFundo:{
+    resizeMode: 'cover',
+    width: '100%',
+    height: '100%'
   },
 
   nameArea:{
@@ -25,39 +30,67 @@ const estilos = StyleSheet . create({
      fontSize: 15,
      margin: 5,     
    },
+   containercarrosel: {
+    height: 100,
+    width: 130,
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    marginRight: 25,
+    marginTop: 10,
+   },
 
-   container:{
-     flexDirection: 'column', 
+   container:{ 
      height: 350,
      width: 330,
      borderWidth: 3,
      borderRadius: 50,
+     backgroundColor: 'white',
      alignSelf:'center',
-     marginTop: 60,  
+     marginTop: 50,  
    },
-
-   containerCima:{
-    flexDirection:"row",
-    height:50,
-    width: 324,
+   button: {
+    width: 100,
+    height: 85,
+    borderRadius: 5,
+    justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 10,
-  },
+    alignSelf: 'center',
+    marginTop: 25,
+    marginLeft: 5,
+    marginRight: 5,
 
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    marginBottom: 10,
+  },
+  Setaesquerda: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    
+  },
+  Setadireita: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+   
+  setaTexto:{
+
+    fontSize: 35,
+    fontWeight: 'bold',
+
+  },
   containerPet:{
-    flexDirection:"row",
     height:230,
     width: 324,
     alignItems: 'center',
+    marginBottom: -35,
   },
 
    pet:{
-  borderRadius:10,
-  padding: 10, 
-  margin: 47, 
   height: 230, 
   width: 230, 
-  resizeMode: 'stretch', 
 },
 
 containerCor:{
@@ -65,9 +98,8 @@ containerCor:{
     maxHeight:60,
     maxWidth: 324,
     alignItems: 'center',
-    paddingEnd: 10,
-    paddingLeft: 100,
-    paddingTop: 10,
+    alignSelf: 'center'
+
   },
 
   botaoCor1:{
