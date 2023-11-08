@@ -4,8 +4,13 @@ const estilos = StyleSheet . create({
 
   fundo:{
     flex:1,
-    backgroundColor:'#00bfff',
   },
+  fundopapel:{
+    resizeMode: 'cover',
+    width: '100%',
+    height: '100%'
+  },
+
 
   area: {
     flexDirection:"row",
@@ -78,6 +83,7 @@ const estilos = StyleSheet . create({
     height:35,
     width:35, 
     alignSelf: 'center',
+    marginLeft: 20,
    },
 
    fotoBotoes: {
@@ -102,7 +108,7 @@ const estilos = StyleSheet . create({
     height: 150,
     width: 150,
     borderRadius:20,
-    marginLeft: 10,
+    marginLeft: 30,
 
     marginTop: 10
   },
@@ -123,11 +129,11 @@ const estilos = StyleSheet . create({
     alignSelf:'center',
     fontSize: 18,
     borderRadius: 10,
-    marginTop: 20,
+    marginTop: 65,
    },
 
    botao:{
-     height:50,
+     height:65,
      width:160,
      backgroundColor:'#fff',
      marginTop:10,
@@ -136,7 +142,7 @@ const estilos = StyleSheet . create({
      justifyContent: 'center',
      alignSelf:'center',
      marginBottom: 20,
-     marginTop: 10,
+     marginTop: 45,
    },
 
    textoBotao:{

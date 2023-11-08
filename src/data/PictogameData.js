@@ -8,25 +8,25 @@ const data = [
     {
         question: "Este é Henrique! como Henrique esta se sentindo?",
         options: ["Alegre","Irritado","Triste"],
-        imagem: require("../img/hamster.jpeg"),
+        imagem: require("../img/PictoIrritado.png"),
         correct_option: "Irritado"
     },
     {
-        question: "O que é isso?",
+        question: "O que está acontecendo?",
         options: ["Um abraço","Uma briga","Um aperto de mãos","Um beijo"],
-        imagem: require("../img/Paraospais.jpeg"),
+        imagem: require("../img/abraço.png"),
         correct_option: "Um abraço"
     },
     {
         question: "E Agora como Henrique está se sentindo?",
         options: ["Irritado","Alegre","Triste","Cansado"],
-        imagem: require("../img/Teapet.jpeg"),
+        imagem: require("../img/saltofeliz.png"),
         correct_option: "Alegre"
     },
     {
         question: "O que os dois Amigos estão fazendo agora?",
         options: ["Se despedindo","Caminhando","Discutindo","Atravessando a rua"],
-        imagem: require("../img/coelho.jpeg"),
+        imagem: require("../img/adeus.jpg"),
         correct_option: "Se despedindo"
     }
 ]

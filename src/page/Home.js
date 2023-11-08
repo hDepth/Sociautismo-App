@@ -93,15 +93,7 @@ import React, { useState } from 'react';
                 style={estilos.fotoBotoes}
               />
           </TouchableOpacity>
-          <TouchableOpacity style={estilos.botaopet}
-          onPress={() => navigation.navigate("Teste1")}>
-            <Text style={estilos.textoBotoes}>Teapets</Text>
-            <Image
-                source={require('../img/Teapet.jpeg')}
-                style={estilos.fotoBotoes}
-              />
-          </TouchableOpacity>
-
+          
           </View>
           <View style={estilos.viewfundos}>
       <TouchableOpacity 

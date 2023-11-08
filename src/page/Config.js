@@ -15,8 +15,8 @@ class Config extends Component {
     super(props);
 
     this.state = {
-      volume: 0.5, // Volume inicial
-      isEnabled: false, // Estado inicial do interruptor
+      volume: 0.5,
+      isEnabled: false,
     };
 
     this.panResponder = PanResponder.create({

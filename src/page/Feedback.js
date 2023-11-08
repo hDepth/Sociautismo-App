@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {ScrollView, SafeAreaView, View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
+import {ScrollView, ImageBackground, View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import estilos from '../css/estilofeedback';
 import { Audio } from 'expo-av';
 
@@ -40,7 +40,10 @@ export default function FeedBack({navigation}) {
 
   return (
      <ScrollView scrollEnabled>
-    <View style={estilos.fundo}>
+    <View>
+    <ImageBackground 
+    style={estilos.fundopapel}
+    source={require('../img/Rectangle.jpg')}>
       <View style={estilos.containersMetas}>
         <View style={estilos.boxnumMeta}>
           <Text style={estilos.numMeta}>
@@ -69,7 +72,7 @@ export default function FeedBack({navigation}) {
             mas cuidado pergunte se ele quer um primeiro em! </Text>
         </View>
         <View>
-          <Image style={estilos.figura} source={require('../img/pet16.png')} />
+          <Image style={estilos.figura} source={require('../img/pet5Headphone.png')} />
           <TouchableOpacity 
           style={estilos.botaosom}
           onPress={playSound}>
@@ -95,6 +98,7 @@ export default function FeedBack({navigation}) {
         <Text style={estilos.textoBotao}>Enviar</Text>
         </TouchableOpacity>
       </View>
+      </ImageBackground>
     </View>
 
     </ScrollView>

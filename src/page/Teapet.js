@@ -100,7 +100,7 @@ import {
             onPress={() => navigation.navigate("Personalizacao")}
             style={estilos.pets}>
               <Image
-                source={require('../img/pet16.png')}
+                source={require('../img/pet5.png')}
                 style={estilos.fotoBotoes}
               />
             </TouchableOpacity>
@@ -114,7 +114,7 @@ import {
   
             <TouchableOpacity style={estilos.pets}>
               <Image
-                source={require('../img/pet4.0.png')}
+                source={require('../img/pet4.png')}
                 style={estilos.fotoBotoes}
               />
             </TouchableOpacity>
@@ -124,7 +124,7 @@ import {
           <View style={estilos.containerMeio}>
           <TouchableOpacity style={estilos.pets}>
            <Image
-              source={require('../img/pet5.png')}
+              source={require('../img/pet16.png')}
               style={estilos.fotoBotoes}
             />
           </TouchableOpacity>

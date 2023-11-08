@@ -17,7 +17,7 @@ export default function TabRoute(){
     return(
         <Tab.Navigator InitialRouteName="Home" screenOptions={{headerShown: false}}>
     <Tab.Screen
-    name="home" component={Home}
+    name="Home" component={Home}
     options={{
         tabBarIcon: ({color, size}) => <FontAwesome name="home" size={24} color="black" />,
         tabBarLabel: 'Home'
@@ -33,7 +33,7 @@ export default function TabRoute(){
     />
 
     <Tab.Screen
-    name="metas" component={Metas}
+    name="Metas" component={Metas}
     options={{
         tabBarIcon: ({color, size}) => <FontAwesome5 name="tasks" size={24} color="black" />,
         tabBarLabel: 'Metas'
