@@ -6,7 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 const allQuestions = require("../data/PictogameData");
 let imagem = allQuestions[0].imagem;
 
-const Quiz = () => {
+export default function Quiz ({navigation}) {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [currentOptionSelected, setCurrentOptionSelected] = useState(null);
@@ -209,6 +209,9 @@ const Quiz = () => {
                     <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Next</Text>
                 </TouchableOpacity>
                 
+                
+                
+                
             )
         }else{
             return null
@@ -317,14 +320,14 @@ const Quiz = () => {
                                }}>Retry Quiz</Text>
                            </TouchableOpacity>
                            <TouchableOpacity
-                           
+                           onPress={() => navigation.navigate("TabRoutes")}
                            style={{
                                backgroundColor: COLORS.accent,
                                padding: 20, width: '100%', borderRadius: 20, marginTop: 10,
                            }}>
                                <Text style={{
                                    textAlign: 'center', color: COLORS.white, fontSize: 20
-                               }}>Voltar Para os Níveis</Text>
+                               }}>Voltar Para Os Níveis</Text>
                            </TouchableOpacity>
 
                        </View>
@@ -341,4 +344,4 @@ const Quiz = () => {
     )
 }
 
-export default Quiz 
+

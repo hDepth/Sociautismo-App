@@ -105,14 +105,18 @@ import {
               />
             </TouchableOpacity>
   
-            <TouchableOpacity style={estilos.pets}>
+            <TouchableOpacity 
+            onPress={() => navigation.navigate("P2")}
+            style={estilos.pets}>
               <Image
                 source={require('../img/pet1.0.png')}
                 style={estilos.fotoBotoes}
               />
             </TouchableOpacity>
   
-            <TouchableOpacity style={estilos.pets}>
+            <TouchableOpacity 
+             onPress={() => navigation.navigate("P3")}
+            style={estilos.pets}>
               <Image
                 source={require('../img/pet4.png')}
                 style={estilos.fotoBotoes}
@@ -122,21 +126,27 @@ import {
   
   
           <View style={estilos.containerMeio}>
-          <TouchableOpacity style={estilos.pets}>
+          <TouchableOpacity 
+           onPress={() => navigation.navigate("P4")}
+          style={estilos.pets}>
            <Image
               source={require('../img/pet16.png')}
               style={estilos.fotoBotoes}
             />
           </TouchableOpacity>
   
-          <TouchableOpacity style={estilos.pets}>
+          <TouchableOpacity 
+           onPress={() => navigation.navigate("P5")}
+          style={estilos.pets}>
             <Image
               source={require('../img/pet10.png')}
               style={estilos.fotoBotoes}
             />
           </TouchableOpacity>
   
-           <TouchableOpacity style={estilos.pets}>
+           <TouchableOpacity 
+            onPress={() => navigation.navigate("P6")}
+           style={estilos.pets}>
             <Image
               source={require('../img/pet15.png')}
               style={estilos.fotoBotoes}
@@ -146,14 +156,18 @@ import {
   
   
         <View style={estilos.containerBaixo}>
-          <TouchableOpacity style={estilos.pets}>
+          <TouchableOpacity 
+           onPress={() => navigation.navigate("P7")}
+          style={estilos.pets}>
            <Image
               source={require('../img/pet9.png')}
               style={estilos.fotoBotoes}
             />
           </TouchableOpacity>
   
-          <TouchableOpacity style={estilos.pets}>
+          <TouchableOpacity 
+           onPress={() => navigation.navigate("P8")}
+          style={estilos.pets}>
             <Image
               source={require('../img/pet17.png')}
               style={estilos.fotoBotoes}
