@@ -16,15 +16,15 @@ export default function Personalizacao({navigation}) {
   const buttons = [
     { label: 'Coroa', image: require('../img/Coroa.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Coroa.png'));
+      setImagemAtual(require('../img/VacaCoroa.png'));
   }},
     { label: 'Laço', image: require('../img/Laço.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Laço.png'));
+      setImagemAtual(require('../img/VacaLaco.png'));
   }},
     { label: 'Boina', image: require('../img/boina.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Boina.png'));
+      setImagemAtual(require('../img/VacaBoina.png'));
   }},
     { label: 'Fones De Ouvido', image: require('../img/headphone.jpeg'), onPress: () => {
  
@@ -32,7 +32,7 @@ export default function Personalizacao({navigation}) {
   }},
     { label: 'Cartola', image: require('../img/cartola.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Cartola.png'));
+      setImagemAtual(require('../img/VacaCartola.png'));
   }},
   ];
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);

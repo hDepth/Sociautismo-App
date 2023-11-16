@@ -16,7 +16,8 @@ const estilos = StyleSheet . create({
     marginLeft: 20,
   },
   areatext3: {
-    color: '#3299CC'
+    color: '#3299CC',
+    fontSize: 20,
   },
   titletermo: {
     fontSize: 20,
@@ -208,13 +209,33 @@ const estilos = StyleSheet . create({
     textAlign: 'center',
   },
   viewfundos: {
-    width: 300,
-    height: 75,
+    width: '100%',
+    height: '100%',
     flexWrap: 'wrap',
     flexDirection: 'row',
-    padding: 5,
-    marginTop: 15,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+  trocarfundo:{
+
+    width: 150,
+    height: 80,
+    borderWidth: 2,
+    backgroundColor: 'white',
+    borderRadius: 10,
+
+
+  },
+  viewfundoss: {
+    width: '70%',
+    height: '65%',
+    alignSelf: 'center',
+    marginTop: 50,
+    borderWidth: 1,
+    flexWrap: 'wrap',
+    flexDirection: 'row',
   },
   botoesfundo: {
   display: 'flex',
@@ -224,12 +245,44 @@ const estilos = StyleSheet . create({
   backgroundColor:"#fff",
   borderWidth: 1,
   borderColor: '#000',
-  borderRadius: 20,
-  height:60,
-  width:60, 
+  height:120,
+  width:75, 
   alignSelf: 'center',
-  marginLeft: 10,
-}
+  marginVertical: 10,
+  marginLeft: 25,
+  
+},
+buttonF: {
+  backgroundColor: '#3498db',
+  padding: 10,
+  borderRadius: 5,
+},
+buttonTextF: {
+  color: 'white',
+  fontSize: 18,
+},
+modalContainerF: {
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+modalButtonF: {
+  marginBottom: 10,
+},
+imageF: {
+  width: 100,
+  height: 100,
+},
+closeButtonF: {
+  backgroundColor: '#e74c3c',
+  padding: 10,
+  borderRadius: 5,
+  marginTop: 20,
+},
+closeButtonTextF: {
+  color: 'white',
+  fontSize: 18,
+},
 
 })
 export default estilos;

@@ -11,6 +11,16 @@ import React, { useState } from 'react';
     const [isAccepted, setAccepted] = useState(false);
     const [modalVisible, setModalVisible] = useState(false);
     const [isVerTermosVisible, setVerTermosVisible] = useState(true);
+    const [fundoModalVisible, setFundoModalVisible] = useState(false);
+
+  const openFundoModal = () => {
+    setFundoModalVisible(true);
+  };
+
+  const closeFundoModal = () => {
+    setFundoModalVisible(false);
+  };
+
     const handleAcceptance = () => {
       setAccepted(!isAccepted);
     };
@@ -66,15 +76,106 @@ import React, { useState } from 'react';
            <Text style={estilos.textArea}>O que deseja fazer?</Text>
         </View>
         <View style={estilos.area2}>
-        {isVerTermosVisible && (
-        <TouchableOpacity onPress={() => setModalVisible(true)}>
-            <Text style={estilos.areatext3}>
-            Termos de uso e condição
-            </Text>
+        
+        <TouchableOpacity
+        style={estilos.trocarfundo}
+        onPress={() => setFundoModalVisible(true)}>
+            <Image
+                source={require('../img/PaspelPasrede.png')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                borderRadius: 8,
+              }}/>
            </TouchableOpacity>
-        )}
            </View>
            </View>
+           <Modal
+        animationType="slide"
+        transparent={false}
+        visible={fundoModalVisible}
+        onRequestClose={closeFundoModal}>
+        <View style={estilos.viewfundos}>
+          
+        <ImageBackground source={backgroundImage} style={{ flex: 1,
+        resizeMode: 'cover',
+        width: '100%',
+        height: '100%'
+        }}>
+          <View style={estilos.viewfundoss}>
+          
+        <TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground1}>
+            <Image
+                source={require('../img/MontanhaLaranja.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                           
+              }}/></TouchableOpacity>
+
+<TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground2}>
+            <Image
+                source={require('../img/FlorestaLaranja.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                            
+              }}/></TouchableOpacity>
+
+<TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground3}>
+            <Image
+                source={require('../img/Espaço.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                          
+              }}/></TouchableOpacity>
+
+<TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground4}>
+            <Image
+                source={require('../img/Rectangle.jpg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                            
+              }}/></TouchableOpacity>
+              <TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground1}>
+            <Image
+                source={require('../img/MontanhaLaranja.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                           
+              }}/></TouchableOpacity>
+
+<TouchableOpacity 
+          style={estilos.botoesfundo}
+          onPress={changeBackground2}>
+            <Image
+                source={require('../img/FlorestaLaranja.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                            
+              }}/></TouchableOpacity>
+              
+</View>
+          <TouchableOpacity onPress={closeFundoModal} style={estilos.closeButtonF}>
+            <Text style={estilos.closeButtonTextF}>Close Modal</Text>
+          </TouchableOpacity>
+          </ImageBackground>
+        </View>
+      </Modal>
            <Modal
         animationType="slide"
         transparent={false}
@@ -219,54 +320,19 @@ import React, { useState } from 'react';
           </TouchableOpacity>
           
           </View>
-          <View style={estilos.viewfundos}>
-      <TouchableOpacity 
-          style={estilos.botoesfundo}
-          onPress={changeBackground1}>
-            <Image
-                source={require('../img/MontanhaLaranja.jpeg')}
-                style={{alignSelf: 'center',
-                height: '100%', 
-                width: '100%',
-                borderRadius: 20,                            
-              }}/></TouchableOpacity>
-
-<TouchableOpacity 
-          style={estilos.botoesfundo}
-          onPress={changeBackground2}>
-            <Image
-                source={require('../img/FlorestaLaranja.jpeg')}
-                style={{alignSelf: 'center',
-                height: '100%', 
-                width: '100%',
-                borderRadius: 20,                            
-              }}/></TouchableOpacity>
-
-<TouchableOpacity 
-          style={estilos.botoesfundo}
-          onPress={changeBackground3}>
-            <Image
-                source={require('../img/Espaço.jpeg')}
-                style={{alignSelf: 'center',
-                height: '100%', 
-                width: '100%',
-                borderRadius: 20,                            
-              }}/></TouchableOpacity>
-
-<TouchableOpacity 
-          style={estilos.botoesfundo}
-          onPress={changeBackground4}>
-            <Image
-                source={require('../img/Rectangle.jpg')}
-                style={{alignSelf: 'center',
-                height: '100%', 
-                width: '100%',
-                borderRadius: 20,                            
-              }}/></TouchableOpacity>
-
-</View>
-
-
+         
+          {isVerTermosVisible && (
+        <TouchableOpacity 
+        style={{
+          alignSelf: 'center',
+          marginTop: 25,
+        }}
+        onPress={() => setModalVisible(true)}>
+            <Text style={estilos.areatext3}>
+            Termos de uso e condição
+            </Text>
+           </TouchableOpacity>
+        )}
 
       </View>
       </ImageBackground>

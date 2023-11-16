@@ -1,42 +1,65 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Modal, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Modal, Image, StyleSheet } from 'react-native';
 
+const Teste1 = () => {
+  const [fundoModalVisible, setFundoModalVisible] = useState(false);
 
-export default function Teste1 () {
-
-  const [modalVisible, setModalVisible] = useState(false);
-
-
-  const handlePress = () => {
-    setModalVisible(true);
+  const openFundoModal = () => {
+    setFundoModalVisible(true);
   };
 
-  const handleClose = () => {
-    setModalVisible(false);
+  const closeFundoModal = () => {
+    setFundoModalVisible(false);
   };
-
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={handlePress} style={styles.button}>
-        <Text style={styles.buttonText}>Pressione-me</Text>
+      <TouchableOpacity onPress={openFundoModal} style={styles.button}>
+        <Text style={styles.buttonText}>Open Modal</Text>
       </TouchableOpacity>
 
       <Modal
         animationType="slide"
         transparent={false}
-        visible={modalVisible}
-        onRequestClose={handleClose}
+        visible={fundoModalVisible}
+        onRequestClose={closeFundoModal}
       >
         <View style={styles.modalContainer}>
-          <ScrollView>
-            <Text style={styles.modalText}>
-            </Text>
-            
-          </ScrollView>
+          <TouchableOpacity style={styles.modalButton}>
+            <Image source={require('../img/VacaLaco.png')} style={styles.image} />
+          </TouchableOpacity>
 
-          <TouchableOpacity onPress={handleClose} style={styles.closeButton}>
-            <Text style={styles.closeButtonText}>Fechar</Text>
+          <TouchableOpacity 
+          style={{display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'flex',
+          backgroundColor:"#fff",
+          borderWidth: 1,
+          borderColor: '#000',
+          borderRadius: 20,
+          height:60,
+          width:60, 
+          alignSelf: 'center',
+          marginLeft: 10,}}>
+            <Image
+                source={require('../img/FlorestaLaranja.jpeg')}
+                style={{alignSelf: 'center',
+                height: '100%', 
+                width: '100%',
+                borderRadius: 20,                            
+              }}/></TouchableOpacity>
+
+          <TouchableOpacity style={styles.modalButton}>
+            <Image source={require('../img/VacaBoina.png')} style={styles.image} />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.modalButton}>
+            <Image source={require('../img/pet5.png')} style={styles.image} />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={closeFundoModal} style={styles.closeButton}>
+            <Text style={styles.closeButtonText}>Close Modal</Text>
           </TouchableOpacity>
         </View>
       </Modal>
@@ -44,40 +67,43 @@ export default function Teste1 () {
   );
 };
 
-// Estilos da página
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  button: {
-    backgroundColor: 'blue',
+  buttonF: {
+    backgroundColor: '#3498db',
     padding: 10,
     borderRadius: 5,
   },
-  buttonText: {
+  buttonTextF: {
     color: 'white',
     fontSize: 18,
   },
-  modalContainer: {
+  modalContainerF: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
   },
-  modalText: {
-    fontSize: 16,
-    marginBottom: 20,
+  modalButtonF: {
+    marginBottom: 10,
   },
-  closeButton: {
-    backgroundColor: 'red',
+  imageF: {
+    width: 100,
+    height: 100,
+  },
+  closeButtonF: {
+    backgroundColor: '#e74c3c',
     padding: 10,
     borderRadius: 5,
     marginTop: 20,
   },
-  closeButtonText: {
+  closeButtonTextF: {
     color: 'white',
     fontSize: 18,
   },
 });
+
+export default Teste1;

@@ -148,7 +148,7 @@ import {
             onPress={() => navigation.navigate("P6")}
            style={estilos.pets}>
             <Image
-              source={require('../img/pet15.png')}
+              source={require('../img/Abelha.png')}
               style={estilos.fotoBotoes}
             />
           </TouchableOpacity>

@@ -16,23 +16,23 @@ export default function P4({navigation}) {
   const buttons = [
     { label: 'Coroa', image: require('../img/Coroa.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Coroa.png'));
+      setImagemAtual(require('../img/HamsterCoroa.png'));
   }},
     { label: 'Laço', image: require('../img/Laço.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Laço.png'));
+      setImagemAtual(require('../img/HamsterLaco.png'));
   }},
     { label: 'Boina', image: require('../img/boina.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Boina.png'));
+      setImagemAtual(require('../img/HamsterBoina.png'));
   }},
     { label: 'Fones De Ouvido', image: require('../img/headphone.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Headphone.png'));
+      setImagemAtual(require('../img/HamsterFone.png'));
   }},
     { label: 'Cartola', image: require('../img/cartola.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Cartola.png'));
+      setImagemAtual(require('../img/HamsterCartola.png'));
   }},
   ];
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);

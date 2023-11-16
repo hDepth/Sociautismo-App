@@ -9,30 +9,30 @@ import estilos from '../css/estiloperso';
 
 export default function P6({navigation}) {
 
-  const [imagemAtual, setImagemAtual] = useState(require('../img/pet15.png'));
+  const [imagemAtual, setImagemAtual] = useState(require('../img/Abelha.png'));
   const [alternar, setAlternar] = useState(false);
 
 
   const buttons = [
     { label: 'Coroa', image: require('../img/Coroa.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Coroa.png'));
+      setImagemAtual(require('../img/AbelhaCoroa.png'));
   }},
     { label: 'Laço', image: require('../img/Laço.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Laço.png'));
+      setImagemAtual(require('../img/AbelhaLaco.png'));
   }},
     { label: 'Boina', image: require('../img/boina.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Boina.png'));
+      setImagemAtual(require('../img/AbelhaBoina.png'));
   }},
     { label: 'Fones De Ouvido', image: require('../img/headphone.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Headphone.png'));
+      setImagemAtual(require('../img/AbelhaFone.png'));
   }},
     { label: 'Cartola', image: require('../img/cartola.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/pet5Cartola.png'));
+      setImagemAtual(require('../img/AbelhaCartola.png'));
   }},
   ];
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
