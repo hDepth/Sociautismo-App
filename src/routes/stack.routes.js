@@ -18,7 +18,7 @@ import FeedBack from '../page/Feedback';
 import Config from '../page/Config';
 import Musica from '../page/Musica';
 import Teste1 from '../page/Testes1';
-import Teste2 from '../page/Testes2';
+import Termos from '../page/Termos';
 import P2 from '../page/P2';
 import P3 from '../page/P3'
 import P4 from '../page/P4'
@@ -46,7 +46,7 @@ export default function StackRoute() {
         <Stack.Screen name="FeedBack" component={FeedBack} />
         <Stack.Screen name="Musica" component={Musica} />
         <Stack.Screen name="Teste1" component={Teste1} />
-        <Stack.Screen name="Teste2" component={Teste2} />
+        <Stack.Screen name="Termos" component={Termos} />
         <Stack.Screen name="P2" component={P2} />
         <Stack.Screen name="P3" component={P3} />
         <Stack.Screen name="P4" component={P4} />

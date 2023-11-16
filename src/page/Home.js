@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground, TouchableOpacity, ScrollView, Image} from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity, Alert, Modal, ScrollView, Image} from 'react-native';
 import React, { useState } from 'react';
   import { getAuth } from "firebase/auth";
   import app from "../services/firebase";
@@ -8,6 +8,29 @@ import React, { useState } from 'react';
   export default function Home({navigation}) {
 
     const [backgroundImage, setBackgroundImage] = useState(require('../img/Rectangle.jpg'));
+    const [isAccepted, setAccepted] = useState(false);
+    const [modalVisible, setModalVisible] = useState(false);
+    const [isVerTermosVisible, setVerTermosVisible] = useState(true);
+    const handleAcceptance = () => {
+      setAccepted(!isAccepted);
+    };
+  
+    const handleProceed = () => {
+      if (isAccepted) {
+        setModalVisible(false);
+        setVerTermosVisible(false);
+        ({ makeButtonInvisible: makeButtonInvisible })
+        Alert.alert('Prosseguir', 'Você aceitou os termos e condições.');
+      } else {
+        Alert.alert('Erro', 'Você deve aceitar os termos e condições para prosseguir.');
+      }
+    };
+  
+    const makeButtonInvisible = () => {
+      
+      console.log('O botão foi tornado invisível na outra página.');
+    };
+
 
   const changeBackground1 = () => {
     setBackgroundImage(require('../img/MontanhaLaranja.jpeg'));
@@ -23,19 +46,6 @@ import React, { useState } from 'react';
   };
 
     const auth = getAuth(app);
-  //     setPersistence(auth, browserSessionPersistence)
-  // .then(() => {
-  //    // Existing and future Auth states are now persisted in the current
-  //    // session only. Closing the window would clear any existing state even
-  //   // if a user forgets to sign out.
-  //    // ...
-  //   // New sign-in will be persisted with session persistence.
-  //    return signInWithEmailAndPassword(auth, email, password);
-  //  })
-  //  .catch((error) => {
-  //    // Handle Errors here.
-  //    console.log("ENOENT ERR!", error.code);
-  //  });
 
      async function signOut(){
 
@@ -50,11 +60,125 @@ import React, { useState } from 'react';
     return (
       <ImageBackground source={backgroundImage} style={{ flex: 1 }}>
       <View>
-      
+      <View style={estilos.area3}>
         <View style={estilos.area}>
-          <Text style={estilos.nameArea}>Oi " "</Text>
-           <Text style={estilos.textArea}>O que deseja fazer</Text>
+          <Text style={estilos.nameArea}>Olá</Text>
+           <Text style={estilos.textArea}>O que deseja fazer?</Text>
         </View>
+        <View style={estilos.area2}>
+        {isVerTermosVisible && (
+        <TouchableOpacity onPress={() => setModalVisible(true)}>
+            <Text style={estilos.areatext3}>
+            Termos de uso e condição
+            </Text>
+           </TouchableOpacity>
+        )}
+           </View>
+           </View>
+           <Modal
+        animationType="slide"
+        transparent={false}
+        visible={modalVisible}
+        onRequestClose={() => setModalVisible(false)}
+      >
+
+        <View style={estilos.viewviewtermo}>
+        <ScrollView style={estilos.containertermo}>
+          <Text style={estilos.titletermo}>Termos e Política de Privacidade</Text>
+
+          <Text>
+            Bem-vindo aos Termos e Política de Privacidade do nosso aplicativo móvel.
+            Ao acessar ou usar o aplicativo, você concorda com estes Termos.
+
+          </Text>
+
+          
+
+          <Text style={estilos.subTitletermo}>1. Uso do Aplicativo</Text>
+          <Text>
+          Nosso aplicativo é um ambiente seguro e educativo projetado para crianças a partir de 4 anos de idade.
+          </Text>
+          <Text style={estilos.subTitletermo}>2. Consentimento dos Pais ou Responsáveis</Text>
+          <Text>
+          Crianças menores de idade precisam obter o consentimento dos país ou responsáveis legais antes de usar o aplicativo.
+          </Text>
+          <Text style={estilos.subTitletermo}>3. Uso Responsável</Text>
+          <Text>
+          Os pais e responsáveis desempenham um papel fundamental na promoção do uso responsável do aplicativo, orientando as crianças sobre 
+          como utilizar as ferramentas e recursos disponíveis da maneira mais construtiva e segura possível.
+          </Text>
+          <Text style={estilos.subTitletermo}>4. Conteúdo Adequado</Text>
+          <Text style={{
+            marginBottom: 10,
+          }}>
+          O aplicativo não oferece conteúdo inadequado, tudo dentro do bom senso e apenas oferecendo material e pontos adequados.
+          </Text>
+
+          <Text style={estilos.titletermo}>Política de Privacidade</Text>
+
+          <Text style={estilos.subTitletermo}>1. Coleta de Informações</Text>
+          <Text>
+          Tais informações como e-mail, nome, sobrenome que são coletadas como dados de registro,
+          informações perfil e qualquer outra informação necessária para o funcionamento do aplicativo.
+          </Text>
+          <Text style={estilos.subTitletermo}>2. Consentimento dos Pais</Text>
+          <Text>
+          Os pais ou/e responsáveis tem a necessidade de prover seu consentimento para coletar informações
+          pessoais de seus filhos. Isso é feito por meio de uma mensagem ou aviso claro no aplicativo.
+          </Text>
+          <Text style={estilos.subTitletermo}>3. Uso de Informações</Text>
+          <Text>
+          Os usos de informações são apenas para menções de usuário e o sistema de recuperação de senha. 
+          Tudo para melhorar o aplicativo, personalizar a experiência do usuário e oferecer suporte 
+          </Text>
+          <Text style={estilos.subTitletermo}>4. Compartilhamento de Informações</Text>
+          <Text>
+          Não serão compartilhadas as informações pessoais das crianças sem consentimento prévio dos pais.
+          </Text>
+          <Text style={estilos.subTitletermo}>5. Segurança</Text>
+          <Text>
+          Nossa equipe está constantemente trabalhando para manter o aplicativo seguro e atualizado, corrigindo potenciais vulnerabilidades de segurança
+          </Text>
+          <Text style={estilos.subTitletermo}>6. Contato</Text>
+          <Text>
+          Estamos sempre à disposição para responder a perguntas, receber feedback e ajudar os pais e responsáveis a fornecer uma experiência segura e enriquecedora para suas crianças. 
+          Para entrar em contato conosco, por favor, envie um e-mail para sincor3s@gmail.com.
+          </Text>
+          <Text style={estilos.subTitletermo}>7. Revisões da Política</Text>
+          <Text>
+          Nossa política de privacidade descreve como coletamos, usamos e protegemos suas informações pessoais. Ao usar este site,
+          você concorda com nossa política de privacidade, e as alterações significativas serão comunicadas aos pais.
+          </Text>
+          
+          </ScrollView>
+          </View>
+
+          
+          <View style={estilos.acceptContainertermo}>
+            <TouchableOpacity onPress={handleAcceptance}>
+              <View style={estilos.radioButtontermo}>
+                {isAccepted && <View style={estilos.radioInnerCircletermo} />}
+              </View>
+            </TouchableOpacity>
+            <Text style={estilos.acceptTexttermo}>Eu Aceito os Termos e Condições</Text>
+          </View>
+
+          <View>
+
+          <TouchableOpacity 
+          style={estilos.botoestermo}
+          onPress={handleProceed} disabled={!isAccepted}>
+            <Text style={estilos.buttonTexttermo}>Prosseguir</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+          style={estilos.botoestermo}
+          onPress={() => setModalVisible(false)}>
+            <Text style={estilos.buttonTexttermo}>Fechar</Text>
+          </TouchableOpacity>
+          </View>
+        
+      </Modal>
 
         <View style={estilos.containerCima}>
           <TouchableOpacity style={estilos.botaopicto}

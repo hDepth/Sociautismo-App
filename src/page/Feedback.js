@@ -40,7 +40,7 @@ export default function FeedBack({navigation}) {
 
   return (
      <ScrollView scrollEnabled>
-    <View>
+    <View style={estilos.container}>
     <ImageBackground 
     style={estilos.fundopapel}
     source={require('../img/Rectangle.jpg')}>
@@ -85,19 +85,7 @@ export default function FeedBack({navigation}) {
         </View>
       </View>
 
-      <View>
-        <TextInput
-          style={estilos.caixaFeedback}
-          value={feedback}
-          placeholder="Digite seu feedback"
-          onChangeText={(texto) => setFeedback(texto)}
-          multiline={true} // Habilita a quebra de linha
-          numberOfLines={12} // Define o número de linhas visíveis
-        />
-        <TouchableOpacity style={estilos.botao}>
-        <Text style={estilos.textoBotao}>Enviar</Text>
-        </TouchableOpacity>
-      </View>
+      
       </ImageBackground>
     </View>
 

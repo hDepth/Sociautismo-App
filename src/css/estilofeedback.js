@@ -2,16 +2,17 @@ import {StyleSheet} from 'react-native';
 
 const estilos = StyleSheet . create({
 
-  fundo:{
-    flex:1,
-  },
+
+
   fundopapel:{
     resizeMode: 'cover',
     width: '100%',
     height: '100%'
   },
-
-
+container:{
+  flex: 1,
+  flexDirection: "column",
+},
   area: {
     flexDirection:"row",
     backgroundColor: '#ffffff',
@@ -119,31 +120,7 @@ const estilos = StyleSheet . create({
     fontSize: 15,
 
   },
-  caixaFeedback:{
-    flexDirection:'column',
-    width:275,
-    height:275,
-    borderColor:'#000',
-    backgroundColor: '#ffffff',
-    borderWidth: 2,
-    alignSelf:'center',
-    fontSize: 18,
-    borderRadius: 10,
-    marginTop: 65,
-   },
-
-   botao:{
-     height:65,
-     width:160,
-     backgroundColor:'#fff',
-     marginTop:10,
-     borderWidth:2,
-     borderRadius:10,
-     justifyContent: 'center',
-     alignSelf:'center',
-     marginBottom: 20,
-     marginTop: 45,
-   },
+  
 
    textoBotao:{
      fontSize:24,
