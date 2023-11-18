@@ -3,24 +3,45 @@ import {StyleSheet} from 'react-native';
 const estilos = StyleSheet . create({
 
 
+  containerprincipal: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
    container:{
      flexDirection: 'column', 
-     minHeight: 350,
-     maxWidth: 325,
-     borderWidth: 3,
-     borderRadius: 50,
-     alignSelf:'center',
-     marginTop: 5,  
+    width: '95%',
+    height: '75%',
+     borderWidth: 2,
+     borderRadius: 5,
+     alignSelf:'center',  
      alignItems:'center',
-     paddingLeft:10,
-     paddingRight:10,
+     justifyContent: 'center',
+     marginTop: '25%',
+     marginBottom: '25%',
    },
 
    titulo:{
      fontSize:30,
      color:'red',
+     marginTop: 25,
+     alignSelf: 'center',
      
+   },
+   texto: {
+    fontSize: 20,
+    marginTop: 10,
+    alignSelf: 'center',
+   },
+   viewtexto: {
+    width: '100%',
+    alignItems: 'center',
+    width: '100%',
+    height: '70%',
+    justifyContent: 'center',
+    
    }
+
 
 })
    export default estilos;

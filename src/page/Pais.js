@@ -4,139 +4,41 @@ import estilos from '../css/estilopais';
 export default function Pais() {
   return (
 
-    <ScrollView scrollEnabled>
-      <SafeAreaView>
-    <View>
+    <View style={estilos.containerprincipal}>
 
       <View style={estilos.container}>
+      <ScrollView scrollEnabled>
       
       <View><Text style={estilos.titulo}>Para os pais</Text></View>
-      <View><Text>
+      <View style={estilos.viewtexto}>
+        <Text style={estilos.texto}>
 
-Ouviram do Ipiranga as margens plácidas
-De um povo heroico, o brado retumbante
-E o Sol da liberdade, em raios fúlgidos
-Brilhou no céu da pátria nesse instante
+      Obrigada país e responsáveis pela confiança e colaboração do nosso aplicativo. Somos um aplicativo que tem como objetivo ajudar o no desenvolvimento da comunicação de crianças com o Transtorno do Espectro Autista.
+Visando isso aqui está uma sequência de dicas e instruções para melhorar para o seu melhor uso e de sua criança:
+Utilize mesma senha e login que a criança, assim você consegue monitorar os avanços e tudo o que for trabalhado no app;
 
-Se o penhor dessa igualdade
-Conseguimos conquistar com braço forte
-Em teu seio, ó liberdade
-Desafia o nosso peito a própria morte
+Acompanhe o desenvolvimento de sua criança;
 
-Ó Pátria amada
-Idolatrada
-Salve! Salve!
+Auxilie e ajude nas atividades e metas que precisam ser cumpridas;
+Introduza o aplicativo de forma gradual para evitar sobrecarregar a criança. 
 
-Brasil, um sonho intenso, um raio vívido
-De amor e de esperança, à terra desce
-Se em teu formoso céu, risonho e límpido
-A imagem do Cruzeiro resplandece
+Comece com funcionalidades básicas e, à medida que ela se familiariza, introduza mais recursos;
 
-Gigante pela própria natureza
-És belo, és forte, impávido colosso
-E o teu futuro espelha essa grandeza
+Demonstre o uso do aplicativo modelando para a criança. Mostre símbolos, palavras ou frases para expressar diferentes necessidades e emoções;
 
-Terra adorada
-Entre outras mil
-És tu, Brasil
-Ó Pátria amada!
-Dos filhos deste solo, és mãe gentil
-Pátria amada, Brasil!
+Reforce positivamente cada tentativa bem-sucedida;
 
-Deitado eternamente em berço esplêndido
-Ao som do mar e à luz do céu profundo
-Fulguras, ó Brasil, florão da América
-Iluminado ao Sol do Novo Mundo!
+Celebre as conquistas da criança, mesmo que sejam pequenas, para incentivar o uso contínuo do aplicativo;
 
-Do que a terra mais garrida
-Teus risonhos, lindos campos têm mais flores
-Nossos bosques têm mais vida
-Nossa vida, no teu seio, mais amores
+Integre o uso do aplicativo na rotina diária da criança. Isso pode incluir momentos específicos, como durante as brincadeiras ou atividades escolares;
 
-Ó Pátria amada
-Idolatrada
-Salve! Salve!
-
-Brasil, de amor eterno seja símbolo
-O lábaro que ostentas estrelado
-E diga o verde-louro dessa flâmula
-Paz no futuro e glória no passado
-
-Mas se ergues da justiça a clava forte
-Verás que um filho teu não foge à luta
-Nem teme, quem te adora, a própria morte
-
-Terra adorada
-Entre outras mil
-És tu, Brasil
-Ó Pátria amada!
-Dos filhos deste solo, és mãe gentil
-Pátria amada, Brasil!Ouviram do Ipiranga as margens plácidas
-De um povo heroico, o brado retumbante
-E o Sol da liberdade, em raios fúlgidos
-Brilhou no céu da pátria nesse instante
-
-Se o penhor dessa igualdade
-Conseguimos conquistar com braço forte
-Em teu seio, ó liberdade
-Desafia o nosso peito a própria morte
-
-Ó Pátria amada
-Idolatrada
-Salve! Salve!
-
-Brasil, um sonho intenso, um raio vívido
-De amor e de esperança, à terra desce
-Se em teu formoso céu, risonho e límpido
-A imagem do Cruzeiro resplandece
-
-Gigante pela própria natureza
-És belo, és forte, impávido colosso
-E o teu futuro espelha essa grandeza
-
-Terra adorada
-Entre outras mil
-És tu, Brasil
-Ó Pátria amada!
-Dos filhos deste solo, és mãe gentil
-Pátria amada, Brasil!
-
-Deitado eternamente em berço esplêndido
-Ao som do mar e à luz do céu profundo
-Fulguras, ó Brasil, florão da América
-Iluminado ao Sol do Novo Mundo!
-
-Do que a terra mais garrida
-Teus risonhos, lindos campos têm mais flores
-Nossos bosques têm mais vida
-Nossa vida, no teu seio, mais amores
-
-Ó Pátria amada
-Idolatrada
-Salve! Salve!
-
-Brasil, de amor eterno seja símbolo
-O lábaro que ostentas estrelado
-E diga o verde-louro dessa flâmula
-Paz no futuro e glória no passado
-
-Mas se ergues da justiça a clava forte
-Verás que um filho teu não foge à luta
-Nem teme, quem te adora, a própria morte
-
-Terra adorada
-Entre outras mil
-És tu, Brasil
-Ó Pátria amada!
-Dos filhos deste solo, és mãe gentil
-Pátria amada, Brasil!</Text>
+Envolva outros membros da família no processo. Isso cria um ambiente de apoio consistente, permitindo que a criança pratique suas habilidades de comunicação em diferentes contextos;</Text>
 
 </View>
-
+</ScrollView>
        
     </View>
   </View>
-      </SafeAreaView>
-  </ScrollView>
+  
   );
 }
