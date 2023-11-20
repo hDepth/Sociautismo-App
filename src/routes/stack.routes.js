@@ -15,6 +15,10 @@ import Pais from '../page/Pais'
 import Metas from '../page/Metas';
 import Niveis from '../page/Niveis';
 import FeedBack from '../page/Feedback';
+import F2 from '../page/F2';
+import F3 from '../page/F3';
+import F4 from '../page/F4';
+import F5 from '../page/F5';
 import Config from '../page/Config';
 import Musica from '../page/Musica';
 import Teste1 from '../page/Testes1';
@@ -44,6 +48,10 @@ export default function StackRoute() {
         <Stack.Screen name="Metas" component={Metas} />
         <Stack.Screen name="Niveis" component={Niveis} />
         <Stack.Screen name="FeedBack" component={FeedBack} />
+        <Stack.Screen name="F2" component={F2} />
+        <Stack.Screen name="F3" component={F3} />
+        <Stack.Screen name="F4" component={F4} />
+        <Stack.Screen name="F5" component={F5} />
         <Stack.Screen name="Musica" component={Musica} />
         <Stack.Screen name="Teste1" component={Teste1} />
         <Stack.Screen name="Termos" component={Termos} />

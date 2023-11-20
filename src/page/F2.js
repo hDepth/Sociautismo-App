@@ -3,7 +3,7 @@ import {ScrollView, ImageBackground, View, Text, Image, TextInput, TouchableOpac
 import estilos from '../css/estilofeedback';
 import { Audio } from 'expo-av';
 
-export default function FeedBack({navigation}) {
+export default function F2({navigation}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
 
@@ -46,29 +46,21 @@ export default function FeedBack({navigation}) {
       <View style={estilos.containersMetas}>
         <View style={estilos.boxnumMeta}>
           <Text style={estilos.numMeta}>
-            1
+            2
           </Text>
         </View>
-        <View style={estilos.containerColumn}>
+        
 
-          <View style={estilos.containerBotao}>
-          
-            <TouchableOpacity style={estilos.botaoVolta}
-            onPress={() => navigation.navigate("Metas")}>
-        <Text style={estilos.textoBotaoVolta}>{'^'}</Text>
-        </TouchableOpacity>
-          </View>
+            <Text style={estilos.textMeta}>Tipos De Cumprimentos</Text>
 
-            <Text style={estilos.textMeta}>Metas</Text>
-
-
-        </View>
       </View>
       <View style={estilos.containerRow}>
         <View style={estilos.area}>
-          <Text style={estilos.titleArea}>
-            Olá! Que tal você tentar dar um abração em um coleguinha da escola? 
-            mas cuidado pergunte se ele quer um primeiro em! </Text>
+          <Text style={{
+            fontSize: 20,
+          }}>
+          Olá! Você lembra dos tipos de cumprimentos?? Aqueles como um aperto de mãos, ou acenar, dizer bom dia ou boa tarde ou boa noite, e até um abração! Agora a gente espera que você tente fazer alguns! Afinal pq nao der um abraçao em alguem da familia? Ou dizer um bom dia caloroso pro seu professor? 
+Boa sorte! </Text>
         </View>
         <View style={estilos.viewimagem}>
 

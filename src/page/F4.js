@@ -3,7 +3,7 @@ import {ScrollView, ImageBackground, View, Text, Image, TextInput, TouchableOpac
 import estilos from '../css/estilofeedback';
 import { Audio } from 'expo-av';
 
-export default function FeedBack({navigation}) {
+export default function F4({navigation}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
 
@@ -46,29 +46,26 @@ export default function FeedBack({navigation}) {
       <View style={estilos.containersMetas}>
         <View style={estilos.boxnumMeta}>
           <Text style={estilos.numMeta}>
-            1
+            4
           </Text>
         </View>
-        <View style={estilos.containerColumn}>
+        
 
-          <View style={estilos.containerBotao}>
-          
-            <TouchableOpacity style={estilos.botaoVolta}
-            onPress={() => navigation.navigate("Metas")}>
-        <Text style={estilos.textoBotaoVolta}>{'^'}</Text>
-        </TouchableOpacity>
-          </View>
+            <Text style={{
+                marginLeft: 20,
+                alignSelf: 'center',
+                fontSize: 20,
+            }}>Bora Comunicar?</Text>
 
-            <Text style={estilos.textMeta}>Metas</Text>
-
-
-        </View>
       </View>
       <View style={estilos.containerRow}>
         <View style={estilos.area}>
-          <Text style={estilos.titleArea}>
-            Olá! Que tal você tentar dar um abração em um coleguinha da escola? 
-            mas cuidado pergunte se ele quer um primeiro em! </Text>
+          <Text style={{
+            fontSize: 16
+          }}>
+          Eita o que temos aqui? nao é possível... quanta beleza em uma só pessoa! Eu aposto que seu sorriso é magnífico, olha lá em acredito eu que você escove bem os seus dentes em!
+Você sabia que quando você da um sorrisao as pessoas entendem que você está alegre?  Eu aprendi agora mesmo!
+Vimos que existem muitas formas de se comunicar nao é mesmo? você pode usar a sua voz, ou suas mãos, mas calma! seja paciente, se ficar com vontade de fazer alguma coisa é só dizer! ou mostrar! </Text>
         </View>
         <View style={estilos.viewimagem}>
 

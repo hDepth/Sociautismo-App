@@ -88,9 +88,9 @@ export default function Metas({navigation}) {
             <View style={estilos.arearea}>
             <ScrollView scrollEnabled>
             <View style={estilos.containersMetas}>
-              <View style={estilos.boxnumMeta}>
+              <View>
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("FeedBack")}>
+                onPress={() => navigation.navigate("F2")}>
                 <Text style={estilos.numMeta}>
                   1
                 </Text>
@@ -98,59 +98,72 @@ export default function Metas({navigation}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-                <Text style={estilos.textMeta}>Metas</Text>
+                <Text style={estilos.textMeta}>Tipos De Cumprimentos</Text>
                 </View>
               </View>
             </View>
 
             <View style={estilos.containersMetas}>
-              <View style={estilos.boxnumMeta}>
+              <View>
+                
+              <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("FeedBack")}>
                 <Text style={estilos.numMeta}>
                   2
                 </Text>
+                </TouchableOpacity>
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-                <Text style={estilos.textMeta}>Metas</Text>
+                <Text style={estilos.textMeta}>Que tal um abraço?</Text>
                 </View>
               </View>
             </View>
 
             <View style={estilos.containersMetas}>
-              <View style={estilos.boxnumMeta}>
+              <View>
+              <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("F3")}>
                 <Text style={estilos.numMeta}>
                   3
                 </Text>
+                </TouchableOpacity>
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-                <Text style={estilos.textMeta}>Metas</Text>
+                <Text style={estilos.textMeta}>Situações Sociais</Text>
                 </View>
               </View>
             </View>
 
             <View style={estilos.containersMetas}>
-              <View style={estilos.boxnumMeta}>
+              <View>
+              <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("F4")}>
                 <Text style={estilos.numMeta}>
                   4
                 </Text>
+                </TouchableOpacity>
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-                <Text style={estilos.textMeta}>Metas</Text>
+                <Text style={estilos.textMeta}>Bora Comunicar?</Text>
                 </View>
               </View>
             </View>
 
             <View style={estilos.containersMetas}>
-              <View style={estilos.boxnumMeta}>
+              <View>
+              <TouchableOpacity style={estilos.boxnumMeta}
+                onPress={() => navigation.navigate("F5")}>
                 <Text style={estilos.numMeta}>
                   5
                 </Text>
+                </TouchableOpacity>
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-                <Text style={estilos.textMeta}>Metas</Text>
+                <Text style={estilos.textMeta}>Entendo Emoções!</Text>
                 </View>
               </View>
             </View>

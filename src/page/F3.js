@@ -3,7 +3,7 @@ import {ScrollView, ImageBackground, View, Text, Image, TextInput, TouchableOpac
 import estilos from '../css/estilofeedback';
 import { Audio } from 'expo-av';
 
-export default function FeedBack({navigation}) {
+export default function F3({navigation}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
 
@@ -46,29 +46,23 @@ export default function FeedBack({navigation}) {
       <View style={estilos.containersMetas}>
         <View style={estilos.boxnumMeta}>
           <Text style={estilos.numMeta}>
-            1
+            3
           </Text>
         </View>
-        <View style={estilos.containerColumn}>
+        
 
-          <View style={estilos.containerBotao}>
-          
-            <TouchableOpacity style={estilos.botaoVolta}
-            onPress={() => navigation.navigate("Metas")}>
-        <Text style={estilos.textoBotaoVolta}>{'^'}</Text>
-        </TouchableOpacity>
-          </View>
+            <Text style={{
+                marginLeft: 20,
+                alignSelf: 'center',
+                fontSize: 20,
+            }}>Situações Sociais</Text>
 
-            <Text style={estilos.textMeta}>Metas</Text>
-
-
-        </View>
       </View>
       <View style={estilos.containerRow}>
         <View style={estilos.area}>
           <Text style={estilos.titleArea}>
-            Olá! Que tal você tentar dar um abração em um coleguinha da escola? 
-            mas cuidado pergunte se ele quer um primeiro em! </Text>
+          Nossa sao tantas situações diferentes! to tao animado pra brincar agora q eu sei de tudo isso! e vc? ja sei, por que você nao brinca um pouco com um amigo? Você tambem pode fazer novos amigos! tenho
+          certeza que agora q vc sabe tudo sobre essas situações sociais vc ta craque e pode fazer um montao de amigos </Text>
         </View>
         <View style={estilos.viewimagem}>
 

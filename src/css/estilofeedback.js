@@ -16,17 +16,31 @@ container:{
   area: {
     flexDirection:"row",
     backgroundColor: '#ffffff',
-    borderRadius: 20, 
-    height:150,
-    width: 180,
-    marginTop: 25,
+    borderRadius: 10, 
+    height:'50%',
+    width: '85%',
+    marginTop: 15,
     marginLeft: 5, 
-    padding: 10,
+    justifyContent:'center',
+    alignItems: 'center',
   },
 
   containerRow:{
-    flexDirection:'row',
-    marginTop: 10,
+    flexDirection:'column',
+    marginTop: 15,
+    width: '100%',
+    height: '70%',
+
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  viewimagem: {
+
+    width: '60%',
+    height: '50%',
+    marginTop: 15,
+
   },
 
   containersMetas: {
@@ -57,12 +71,6 @@ container:{
     fontWeight:'bold'
     
   },
-
-  containerBotao:{
-    height:20,
-    width:240,
-  },
-
   botaoVolta:{
     marginLeft:210,
   },
@@ -81,43 +89,37 @@ container:{
     borderWidth: 1,
     borderColor: '#000',
     borderRadius: 20,
-    height:35,
-    width:35, 
+    height:40,
+    width:40, 
     alignSelf: 'center',
-    marginLeft: 20,
+    marginTop: 5,
+
    },
 
    fotoBotoes: {
   
       alignSelf: 'center',
-      height: 30, 
-      width: 30,
+      height: '100%', 
+      width: '100%',
    },
    
-  containerColumn:{
-    width:240,
-    height:90,
-  },
+  
 
   textMeta:{
-   marginLeft: 25,
    alignSelf: 'center',
-   fontSize: 20
+   fontSize: 20,
   },
 
   figura:{
-    height: 150,
-    width: 150,
-    borderRadius:20,
-    marginLeft: 30,
-
-    marginTop: 10
+    height: '70%',
+    width: '100%',
   },
 
   titleArea:{
 
-    alignSelf: 'center',
-    fontSize: 15,
+    
+    fontSize: 20,
+    alignSelf:'center',
 
   },
   

@@ -3,7 +3,7 @@ import {ScrollView, ImageBackground, View, Text, Image, TextInput, TouchableOpac
 import estilos from '../css/estilofeedback';
 import { Audio } from 'expo-av';
 
-export default function FeedBack({navigation}) {
+export default function F5({navigation}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
 
@@ -46,29 +46,26 @@ export default function FeedBack({navigation}) {
       <View style={estilos.containersMetas}>
         <View style={estilos.boxnumMeta}>
           <Text style={estilos.numMeta}>
-            1
+            5
           </Text>
         </View>
-        <View style={estilos.containerColumn}>
+        
 
-          <View style={estilos.containerBotao}>
-          
-            <TouchableOpacity style={estilos.botaoVolta}
-            onPress={() => navigation.navigate("Metas")}>
-        <Text style={estilos.textoBotaoVolta}>{'^'}</Text>
-        </TouchableOpacity>
-          </View>
-
-            <Text style={estilos.textMeta}>Metas</Text>
+            <Text style={{
+                marginLeft: 20,
+                alignSelf: 'center',
+                fontSize: 20,}}>Entendo Emoções!</Text>
 
 
-        </View>
       </View>
       <View style={estilos.containerRow}>
         <View style={estilos.area}>
-          <Text style={estilos.titleArea}>
-            Olá! Que tal você tentar dar um abração em um coleguinha da escola? 
-            mas cuidado pergunte se ele quer um primeiro em! </Text>
+          <Text style={{
+            alignSelf: 'center',
+            fontSize: 18
+            }}>
+          Existem muitas formas de se expressar não é? Você pode estar feliz ou zangado ou animado ou até borocoxo! Vimos como saber quando alguém está expressando alguma emoção, e também aprendemos do jeitinho certo como mostrar sua emoção. 
+Agorá vamos lá, não fique na dúvida na hora de expressar suas emoções, e atenção no humor das outras pessoas também! </Text>
         </View>
         <View style={estilos.viewimagem}>
 
