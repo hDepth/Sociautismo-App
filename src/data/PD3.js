@@ -1,33 +1,40 @@
 const data = [
     {
-        question: "Dois amigos se encontram enquanto caminhavam, O que eles estão fazendo?",
-        options: ["Se cumprimentando","Despedindo","Acenando","Conversando"],
+        question: "Você está no parque e vê uma criança sozinha. O que você faz?",
+        options: ["Continua brincando","Vai embora","Pergunta se ela quer brincar","Ignora a situação"],
         imagem: require("../img/Pictogame.jpeg"),
-        correct_option: "Se cumprimentando"
+        correct_option: "Pergunta se ela quer brincar"
     },
     {
-        question: "Este é Henrique! como Henrique esta se sentindo?",
-        options: ["Alegre","Irritado","Triste"],
+        question: "Durante a aula, seu amigo parece triste. O que você faz?",
+        options: ["Pergunta se está tudo bem","Continua com suas atividades","não faz nada", "Zomba dele"],
         imagem: require("../img/PictoIrritado.png"),
-        correct_option: "Irritado"
+        correct_option: "Pergunta se está tudo bem"
     },
     {
-        question: "O que está acontecendo?",
-        options: ["Um abraço","Uma briga","Um aperto de mãos","Um beijo"],
+        question: "Quando você conhece alguém novo, o que você faz para cumprimentá-lo?",
+        options: ["Fica quieto","Não faz nada","Da um abraço","Diz 'oi' ou Aperta a mão"],
         imagem: require("../img/abraço.png"),
-        correct_option: "Um abraço"
+        correct_option: "Diz 'oi' ou Aperta a mão"
     },
     {
-        question: "E Agora como Henrique está se sentindo?",
-        options: ["Irritado","Alegre","Triste","Cansado"],
+        question: "Em uma brincadeira em grupo, o que você faz se alguém não entender as regras?",
+        options: ["Explica as regras","Continua jogando","Ri da situação","Para de brincar"],
         imagem: require("../img/saltofeliz.png"),
-        correct_option: "Alegre"
+        correct_option: "Explica as regras"
     },
     {
-        question: "O que os dois Amigos estão fazendo agora?",
-        options: ["Se despedindo","Caminhando","Discutindo","Atravessando a rua"],
+        question: "Se alguém está sorrindo, o que isso geralmente significa",
+        options: ["Está zangado","Está feliz","Está triste","Está surpreso"],
         imagem: require("../img/adeus.jpg"),
-        correct_option: "Se despedindo"
-    }
+        correct_option: "Está feliz"
+    },
+    {
+        question: "Durante uma atividade silenciosa na sala de aula, o que você faz se precisar de ajuda?",
+        options: ["Fica quieto","Não faz nada","Levanta a mão e espera","Grita"],
+        imagem: require("../img/adeus.jpg"),
+        correct_option: "Levanta a mão e espera"
+    },
+    
 ]
 module.exports = data;

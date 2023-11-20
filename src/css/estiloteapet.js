@@ -10,7 +10,7 @@ const estilos = StyleSheet . create({
     borderRadius: 20, 
     height:90,
     width: 140,
-    marginTop: 25,
+    marginTop: 40,
     marginLeft: 10, 
   },
 
@@ -23,7 +23,7 @@ const estilos = StyleSheet . create({
     justifyContent: 'center',
     flexWrap: 'wrap',
     marginLeft: 25,
-    marginTop: 25,
+    marginTop: 40,
     marginBottom: -60
   },
   botoesfundo: {

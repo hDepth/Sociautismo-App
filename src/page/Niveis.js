@@ -159,7 +159,7 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal}
                 <ScrollView>
               <View style={estilos.containersMetas}>
                 <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("Pictogame")}>
+                onPress={() => navigation.navigate("PG2")}>
                   <Text style={estilos.numMeta}>
                     1
                   </Text>
@@ -190,7 +190,7 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal}
               </View>
               <View style={estilos.containersMetas}>
                 <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("Pictogame")}>
+                onPress={() => navigation.navigate("PG3")}>
                   <Text style={estilos.numMeta}>
                     3
                   </Text>
@@ -204,7 +204,7 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal}
               </View>
               <View style={estilos.containersMetas}>
                 <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("Pictogame")}>
+                onPress={() => navigation.navigate("PG4")}>
                   <Text style={estilos.numMeta}>
                     4
                   </Text>
@@ -219,7 +219,7 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal}
               </View>
               <View style={estilos.containersMetas}>
                 <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("Pictogame")}>
+                onPress={() => navigation.navigate("PG5")}>
                   <Text style={estilos.numMeta}>
                     5
                   </Text>

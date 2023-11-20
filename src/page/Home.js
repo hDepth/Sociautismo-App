@@ -57,6 +57,11 @@ import React, { useState } from 'react';
     setBackgroundImage(require('../img/branco.jpg'));
   };
 
+  const makeButtonInvisible = () => {
+    
+
+  };
+
     const auth = getAuth(app);
 
      async function signOut(){

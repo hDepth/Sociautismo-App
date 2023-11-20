@@ -7,12 +7,43 @@ import {
     Modal
   } from 'react-native';
   import estilos from '../css/estiloteapet';
-  import React, {useState} from 'react';
+  import React, {useState, useEffect} from 'react';
+  import { Audio } from 'expo-av';
   
   export default function Teapet({navigation}) {
 
     const [backgroundImage, setBackgroundImage] = useState(require('../img/Rectangle.jpg'));
     const [fundoModalVisible, setFundoModalVisible] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
+  const [sound, setSound] = useState(null);
+
+  useEffect(() => {
+    const loadSound = async () => {
+      const { sound } = await Audio.Sound.createAsync(
+        require('../audios/bloqueado.mp3') 
+      );
+      setSound(sound);
+    };
+
+    loadSound();
+
+    return () => {
+      if (sound) {
+        sound.unloadAsync();
+      }
+    };
+  }, []);
+
+  const playSound = async () => {
+    if (sound) {
+      if (isPlaying) {
+        await sound.stopAsync();
+      } else {
+        await sound.playAsync();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
 
     const closeFundoModal = () => {
@@ -49,8 +80,8 @@ import {
               marginTop: 1,
           }}>
         <View style={estilos.area}>
-          <Text style={estilos.nameArea}>Olá!</Text>
-          <Text style={estilos.textArea}>O que deseja fazer</Text>
+          <Text style={estilos.nameArea}>TEAPET</Text>
+          <Text style={estilos.textArea}>Escolha seu pet!</Text>
         </View>
 
         <View style={estilos.areabotoes}>
@@ -202,7 +233,7 @@ import {
           </TouchableOpacity>
   
           <TouchableOpacity 
-           onPress={() => navigation.navigate("P5")}
+           onPress={playSound}
           style={estilos.pets}>
             <Image
               source={require('../img/pet10.png')}

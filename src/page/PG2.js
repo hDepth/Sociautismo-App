@@ -4,10 +4,10 @@ import { COLORS, SIZES } from '../constants';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Audio } from 'expo-av';
 
-const allQuestions = require("../data/PictogameData");
+const allQuestions = require("../data/PD2");
 let imagem = allQuestions[0].imagem;
 
-export default function Pictogame ({navigation}) {
+export default function PG2 ({navigation}) {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [currentOptionSelected, setCurrentOptionSelected] = useState(null);
@@ -46,7 +46,6 @@ export default function Pictogame ({navigation}) {
         setIsPlaying(!isPlaying);
       }
     };
-
     const validateAnswer = (selectedOption) => {
         let correct_option = allQuestions[currentQuestionIndex]['correct_option'];
         setCurrentOptionSelected(selectedOption);
@@ -106,7 +105,8 @@ export default function Pictogame ({navigation}) {
             <View style={{
                 marginVertical: 0,
             }}>
-                 <ScrollView style={ {marginHorizontal: 20}}>
+                 <ScrollView style={ {marginHorizontal: 7,
+                marginVertical: -5}}>
                 {/* Question Counter */}
                 <View style={{
                     flexDirection: 'row',
@@ -164,6 +164,7 @@ export default function Pictogame ({navigation}) {
     const renderOptions = () => {
         return (
             <View>
+                <ScrollView>
 
                 <View style={{
                     alignItems: 'center',
@@ -245,6 +246,7 @@ export default function Pictogame ({navigation}) {
                 }
                 
                 </View>
+                </ScrollView>
             </View>
         )
     }

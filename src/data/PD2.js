@@ -1,33 +1,39 @@
 const data = [
     {
-        question: "Dois amigos se encontram enquanto caminhavam, O que eles estão fazendo?",
-        options: ["Se cumprimentando","Despedindo","Acenando","Conversando"],
+        question: "Quando você encontra um amigo, qual é uma maneira comum de cumprimentá-lo usando as mãos?",
+        options: ["Ficar Parado","Pular","Aperto De Mãos","Balançar a cabeça"],
         imagem: require("../img/Pictogame.jpeg"),
-        correct_option: "Se cumprimentando"
+        correct_option: "Aperto De Mãos"
     },
     {
-        question: "Este é Henrique! como Henrique esta se sentindo?",
-        options: ["Alegre","Irritado","Triste"],
+        question: "O que você faz para cumprimentar alguém de forma carinhosa?",
+        options: ["Dizer 'Oi!'","Ignorar","Gritar com ela", "Abraça-la"],
         imagem: require("../img/PictoIrritado.png"),
-        correct_option: "Irritado"
+        correct_option: "Abraça-la"
     },
     {
-        question: "O que está acontecendo?",
-        options: ["Um abraço","Uma briga","Um aperto de mãos","Um beijo"],
+        question: "Como você pode cumprimentar alguém usando sua voz?",
+        options: ["Pular","Dizer 'oi' ou 'olá'","Gritar","Aperto de mãos"],
         imagem: require("../img/abraço.png"),
-        correct_option: "Um abraço"
+        correct_option: "Dizer 'oi' ou 'olá'"
     },
     {
-        question: "E Agora como Henrique está se sentindo?",
-        options: ["Irritado","Alegre","Triste","Cansado"],
+        question: "Como você pode mostrar que está feliz ao cumprimentar alguém?",
+        options: ["Ficar Sério","Sorrir","Chorar","Cruzar os braços"],
         imagem: require("../img/saltofeliz.png"),
-        correct_option: "Alegre"
+        correct_option: "Sorrir"
     },
     {
-        question: "O que os dois Amigos estão fazendo agora?",
-        options: ["Se despedindo","Caminhando","Discutindo","Atravessando a rua"],
+        question: "O que você faz para cumprimentar alguém que está longe sem falar?",
+        options: ["Gritar seu nome","Vira-se de costas","Acenar","Ir até ela"],
         imagem: require("../img/adeus.jpg"),
-        correct_option: "Se despedindo"
+        correct_option: "Acenar"
+    },
+    {
+        question: "Qual é uma maneira respeitosa de cumprimentar um adulto ou professor?",
+        options: ["Dizer 'bom dia Professor'","Gritar com ele","Nao dizer nada","Usar gírias"],
+        imagem: require("../img/adeus.jpg"),
+        correct_option: "Dizer 'bom dia Professor'"
     }
 ]
 module.exports = data;

@@ -24,7 +24,7 @@ const estilos = StyleSheet . create({
    titulo:{
      fontSize:30,
      color:'red',
-     marginTop: 25,
+     marginTop: -30,
      alignSelf: 'center',
      
    },
@@ -37,10 +37,15 @@ const estilos = StyleSheet . create({
     width: '100%',
     alignItems: 'center',
     width: '100%',
-    height: '70%',
+    height: '85%',
     justifyContent: 'center',
     
-   }
+   },
+   imagemFundo:{
+    resizeMode: 'cover',
+    width: '100%',
+    height: '100%'
+  },
 
 
 })

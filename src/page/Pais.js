@@ -1,16 +1,20 @@
-import { ScrollView, SafeAreaView, View, Text, Image, } from 'react-native';
+import { ScrollView, SafeAreaView, View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import estilos from '../css/estilopais';
 
-export default function Pais() {
+export default function Pais({navigation}) {
   return (
 
     <View style={estilos.containerprincipal}>
-
+<ImageBackground
+        style={estilos.imagemFundo}
+        source={require('../img/Rectangle.jpg')}
+      >
       <View style={estilos.container}>
-      <ScrollView scrollEnabled>
+      
       
       <View><Text style={estilos.titulo}>Para os pais</Text></View>
       <View style={estilos.viewtexto}>
+      <ScrollView scrollEnabled>
         <Text style={estilos.texto}>
 
       Obrigada país e responsáveis pela confiança e colaboração do nosso aplicativo. Somos um aplicativo que tem como objetivo ajudar o no desenvolvimento da comunicação de crianças com o Transtorno do Espectro Autista.
@@ -33,11 +37,24 @@ Celebre as conquistas da criança, mesmo que sejam pequenas, para incentivar o u
 Integre o uso do aplicativo na rotina diária da criança. Isso pode incluir momentos específicos, como durante as brincadeiras ou atividades escolares;
 
 Envolva outros membros da família no processo. Isso cria um ambiente de apoio consistente, permitindo que a criança pratique suas habilidades de comunicação em diferentes contextos;</Text>
-
-</View>
 </ScrollView>
+</View>
+<TouchableOpacity  
+           onPress={() => navigation.navigate("TabRoutes")}
+           style={estilos.pets}>
+            <Image
+              source={require('../img/Voltar.png')}
+              style={{
+                width: 30,
+                height: 30,
+                marginBottom: -20,
+                marginTop: 10,
+              }}
+            />
+          </TouchableOpacity>
        
     </View>
+    </ImageBackground>
   </View>
   
   );

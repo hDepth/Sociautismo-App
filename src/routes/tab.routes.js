@@ -9,7 +9,6 @@ import Pictogame from '../page/Pictogame';
 import Metas from '../page/Metas';
 import Home from '../page/Home';
 import Niveis from '../page/Niveis'
-import Config from '../page/Config'
 
 const Tab = createBottomTabNavigator();
 
@@ -45,14 +44,6 @@ export default function TabRoute(){
     options={{
         tabBarIcon: ({color, size}) => <MaterialIcons name="pets" size={24} color="black" />,
         tabBarLabel: 'Pets'
-    }}
-    />
-
-   <Tab.Screen
-    name="Config" component={Config}
-    options={{
-        tabBarIcon: ({color, size}) => <MaterialIcons name="settings" size={24} color="black" />,
-        tabBarLabel: 'Config'
     }}
     />
 

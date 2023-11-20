@@ -4,10 +4,10 @@ import { COLORS, SIZES } from '../constants';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Audio } from 'expo-av';
 
-const allQuestions = require("../data/PictogameData");
+const allQuestions = require("../data/PD5");
 let imagem = allQuestions[0].imagem;
 
-export default function Pictogame ({navigation}) {
+export default function PG5 ({navigation}) {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [currentOptionSelected, setCurrentOptionSelected] = useState(null);

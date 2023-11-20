@@ -11,7 +11,11 @@ import RecSenha from '../pages/RecSenha';
 import Personalizacao from '../page/Personalizacao';
 import Teapet from '../page/Teapet';
 import Pictogame from '../page/Pictogame'
-import Pais from '../page/Pais'
+import PG2 from '../page/PG2';
+import PG3 from '../page/PGame3';
+import PG4 from '../page/PG4';
+import PG5 from '../page/PG5';
+import Pais from '../page/Pais';
 import Metas from '../page/Metas';
 import Niveis from '../page/Niveis';
 import FeedBack from '../page/Feedback';
@@ -19,16 +23,15 @@ import F2 from '../page/F2';
 import F3 from '../page/F3';
 import F4 from '../page/F4';
 import F5 from '../page/F5';
-import Config from '../page/Config';
 import Teste1 from '../page/Testes1';
 import Termos from '../page/Termos';
 import P2 from '../page/P2';
-import P3 from '../page/P3'
-import P4 from '../page/P4'
-import P5 from '../page/P5'
-import P6 from '../page/P6'
-import P7 from '../page/P7'
-import P8 from '../page/P8'
+import P3 from '../page/P3';
+import P4 from '../page/P4';
+import P5 from '../page/P5';
+import P6 from '../page/P6';
+import P7 from '../page/P7';
+import P8 from '../page/P8';
 
 export default function StackRoute() {
   
@@ -43,6 +46,10 @@ export default function StackRoute() {
         <Stack.Screen name="Personalizacao" component={Personalizacao} />
         <Stack.Screen name="TeaPet" component={Teapet} />
         <Stack.Screen name="Pictogame" component={Pictogame} />
+        <Stack.Screen name="PG2" component={PG2} />
+        <Stack.Screen name="PG3" component={PG3} />
+        <Stack.Screen name="PG4" component={PG4} />
+        <Stack.Screen name="PG5" component={PG5} />
         <Stack.Screen name="Pais" component={Pais} />
         <Stack.Screen name="Metas" component={Metas} />
         <Stack.Screen name="Niveis" component={Niveis} />
@@ -60,7 +67,6 @@ export default function StackRoute() {
         <Stack.Screen name="P6" component={P6} />
         <Stack.Screen name="P7" component={P7} />
         <Stack.Screen name="P8" component={P8} />
-        <Stack.Screen name="Config" component={Config} />
 
       </Stack.Navigator>
 
