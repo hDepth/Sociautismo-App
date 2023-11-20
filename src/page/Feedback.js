@@ -46,23 +46,13 @@ export default function FeedBack({navigation}) {
       <View style={estilos.containersMetas}>
         <View style={estilos.boxnumMeta}>
           <Text style={estilos.numMeta}>
-            1
+            2
           </Text>
         </View>
-        <View style={estilos.containerColumn}>
+        
 
-          <View style={estilos.containerBotao}>
-          
-            <TouchableOpacity style={estilos.botaoVolta}
-            onPress={() => navigation.navigate("Metas")}>
-        <Text style={estilos.textoBotaoVolta}>{'^'}</Text>
-        </TouchableOpacity>
-          </View>
+            <Text style={estilos.textMeta}>Que tal um abraço?</Text>
 
-            <Text style={estilos.textMeta}>Metas</Text>
-
-
-        </View>
       </View>
       <View style={estilos.containerRow}>
         <View style={estilos.area}>

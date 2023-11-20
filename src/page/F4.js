@@ -10,7 +10,7 @@ export default function F4({navigation}) {
   useEffect(() => {
     const loadSound = async () => {
       const { sound } = await Audio.Sound.createAsync(
-        require('../audios/Lucas.mp3') 
+        require('../audios/Comunicacao.mp3') 
       );
       setSound(sound);
     };

@@ -219,23 +219,19 @@ const estilos = StyleSheet . create({
     alignContent: 'center',
   },
   trocarfundo:{
-
     width: 150,
     height: 80,
     borderWidth: 2,
     backgroundColor: 'white',
     borderRadius: 10,
-
-
   },
   viewfundoss: {
-    width: '70%',
-    height: '65%',
+    width: '85%',
+    height: '45%',
     alignSelf: 'center',
-    marginTop: 50,
-    borderWidth: 1,
+    marginTop: 100,
     flexWrap: 'wrap',
-    flexDirection: 'row',
+    flexDirection: 'wrap',
   },
   botoesfundo: {
   display: 'flex',

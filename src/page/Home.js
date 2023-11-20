@@ -36,10 +36,6 @@ import React, { useState } from 'react';
       }
     };
   
-    const makeButtonInvisible = () => {
-      
-      console.log('O botão foi tornado invisível na outra página.');
-    };
 
 
   const changeBackground1 = () => {
@@ -53,6 +49,12 @@ import React, { useState } from 'react';
   };
   const changeBackground4 = () => {
     setBackgroundImage(require('../img/Rectangle.jpg'));
+  };
+  const changeBackground5 = () => {
+    setBackgroundImage(require('../img/oceano.jpeg'));
+  };
+  const changeBackground6 = () => {
+    setBackgroundImage(require('../img/branco.jpg'));
   };
 
     const auth = getAuth(app);
@@ -149,9 +151,9 @@ import React, { useState } from 'react';
               }}/></TouchableOpacity>
               <TouchableOpacity 
           style={estilos.botoesfundo}
-          onPress={changeBackground1}>
+          onPress={changeBackground5}>
             <Image
-                source={require('../img/MontanhaLaranja.jpeg')}
+                source={require('../img/oceano.jpeg')}
                 style={{alignSelf: 'center',
                 height: '100%', 
                 width: '100%',
@@ -160,9 +162,9 @@ import React, { useState } from 'react';
 
 <TouchableOpacity 
           style={estilos.botoesfundo}
-          onPress={changeBackground2}>
+          onPress={changeBackground6}>
             <Image
-                source={require('../img/FlorestaLaranja.jpeg')}
+                source={require('../img/branco.jpg')}
                 style={{alignSelf: 'center',
                 height: '100%', 
                 width: '100%',
@@ -176,6 +178,7 @@ import React, { useState } from 'react';
           </ImageBackground>
         </View>
       </Modal>
+
            <Modal
         animationType="slide"
         transparent={false}

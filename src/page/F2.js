@@ -10,7 +10,7 @@ export default function F2({navigation}) {
   useEffect(() => {
     const loadSound = async () => {
       const { sound } = await Audio.Sound.createAsync(
-        require('../audios/Lucas.mp3') 
+        require('../audios/TiposCumprimentos.mp3') 
       );
       setSound(sound);
     };
@@ -46,7 +46,7 @@ export default function F2({navigation}) {
       <View style={estilos.containersMetas}>
         <View style={estilos.boxnumMeta}>
           <Text style={estilos.numMeta}>
-            2
+            1
           </Text>
         </View>
         

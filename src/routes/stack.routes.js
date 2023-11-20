@@ -20,7 +20,6 @@ import F3 from '../page/F3';
 import F4 from '../page/F4';
 import F5 from '../page/F5';
 import Config from '../page/Config';
-import Musica from '../page/Musica';
 import Teste1 from '../page/Testes1';
 import Termos from '../page/Termos';
 import P2 from '../page/P2';
@@ -52,7 +51,6 @@ export default function StackRoute() {
         <Stack.Screen name="F3" component={F3} />
         <Stack.Screen name="F4" component={F4} />
         <Stack.Screen name="F5" component={F5} />
-        <Stack.Screen name="Musica" component={Musica} />
         <Stack.Screen name="Teste1" component={Teste1} />
         <Stack.Screen name="Termos" component={Termos} />
         <Stack.Screen name="P2" component={P2} />

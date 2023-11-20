@@ -10,7 +10,7 @@ const estilos = StyleSheet . create({
     borderRadius: 20, 
     height:90,
     width: 140,
-    marginTop: 40,
+    marginTop: 25,
     marginLeft: 10, 
   },
 
@@ -23,8 +23,8 @@ const estilos = StyleSheet . create({
     justifyContent: 'center',
     flexWrap: 'wrap',
     marginLeft: 25,
-    marginTop: 35,
-    marginBottom: -20
+    marginTop: 25,
+    marginBottom: -60
   },
   botoesfundo: {
     display: 'flex',
@@ -124,6 +124,77 @@ const estilos = StyleSheet . create({
   height: 80, 
   width: 80, 
   resizeMode: 'stretch', 
+},
+viewfundos: {
+  width: '100%',
+  height: '100%',
+  flexWrap: 'wrap',
+  flexDirection: 'row',
+  alignSelf: 'center',
+  justifyContent: 'center',
+  alignItems: 'center',
+  alignContent: 'center',
+},
+trocarfundo:{
+  width: 150,
+  height: 80,
+  borderWidth: 2,
+  backgroundColor: 'white',
+  borderRadius: 10,
+},
+viewfundoss: {
+  width: '85%',
+  height: '45%',
+  alignSelf: 'center',
+  marginTop: 100,
+  flexWrap: 'wrap',
+  flexDirection: 'wrap',
+},
+botoesfundoz: {
+display: 'flex',
+flexDirection: 'column',
+alignItems: 'center',
+justifyContent: 'flex',
+backgroundColor:"#fff",
+borderWidth: 1,
+borderColor: '#000',
+height:120,
+width:75, 
+alignSelf: 'center',
+marginVertical: 10,
+marginLeft: 25,
+
+},
+buttonF: {
+backgroundColor: '#3498db',
+padding: 10,
+borderRadius: 5,
+},
+buttonTextF: {
+color: 'white',
+fontSize: 18,
+},
+modalContainerF: {
+flex: 1,
+justifyContent: 'center',
+alignItems: 'center',
+},
+modalButtonF: {
+marginBottom: 10,
+},
+imageF: {
+width: 100,
+height: 100,
+},
+closeButtonF: {
+backgroundColor: '#e74c3c',
+padding: 10,
+borderRadius: 5,
+marginTop: 20,
+},
+closeButtonTextF: {
+color: 'white',
+fontSize: 18,
 },
 })
    export default estilos;
