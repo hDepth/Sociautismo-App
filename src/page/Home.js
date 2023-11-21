@@ -5,13 +5,15 @@ import React, { useState } from 'react';
   import estilos from '../css/estilohome';
 
   
-  export default function Home({navigation}) {
+  export default function Home({navigation, route}) {
 
     const [backgroundImage, setBackgroundImage] = useState(require('../img/Rectangle.jpg'));
     const [isAccepted, setAccepted] = useState(false);
     const [modalVisible, setModalVisible] = useState(false);
     const [isVerTermosVisible, setVerTermosVisible] = useState(true);
     const [fundoModalVisible, setFundoModalVisible] = useState(false);
+
+    
 
   const openFundoModal = () => {
     setFundoModalVisible(true);
@@ -79,6 +81,7 @@ import React, { useState } from 'react';
       <View>
       <View style={estilos.area3}>
         <View style={estilos.area}>
+        
           <Text style={estilos.nameArea}>Olá</Text>
            <Text style={estilos.textArea}>O que deseja fazer?</Text>
         </View>

@@ -24,6 +24,8 @@ import F3 from '../page/F3';
 import F4 from '../page/F4';
 import F5 from '../page/F5';
 import Teste1 from '../page/Testes1';
+import Teste2 from '../page/Teste2';
+import Teste3 from '../page/Teste3';
 import Termos from '../page/Termos';
 import P2 from '../page/P2';
 import P3 from '../page/P3';
@@ -59,6 +61,8 @@ export default function StackRoute() {
         <Stack.Screen name="F4" component={F4} />
         <Stack.Screen name="F5" component={F5} />
         <Stack.Screen name="Teste1" component={Teste1} />
+        <Stack.Screen name="Teste2" component={Teste2} />
+        <Stack.Screen name="Teste3" component={Teste3} />
         <Stack.Screen name="Termos" component={Termos} />
         <Stack.Screen name="P2" component={P2} />
         <Stack.Screen name="P3" component={P3} />

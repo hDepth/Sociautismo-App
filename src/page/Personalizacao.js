@@ -13,6 +13,12 @@ export default function Personalizacao({navigation}) {
   const [alternar, setAlternar] = useState(false);
 
 
+  const handleImagePress = () => {
+    
+    navigation.navigate('TabRoutes', { selectedImage: imagemAtual });
+  };
+
+
   const buttons = [
     { label: 'Coroa', image: require('../img/Coroa.jpeg'), onPress: () => {
  
@@ -55,7 +61,7 @@ export default function Personalizacao({navigation}) {
     <View>
       <ImageBackground
         style={estilos.imagemFundo}
-        source={require('../img/MontanhaLaranja.jpeg')}
+        source={require('../img/Rectangle.jpg')}
       >
         <View style={estilos.area}>
           <Text style={estilos.nameArea}>Oi " "</Text>
@@ -88,7 +94,7 @@ export default function Personalizacao({navigation}) {
 
         <View style={estilos.sair}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("TabRoutes")}
+            onPress={handleImagePress}
             style={estilos.botaoVoltar}>
             <Image
               source={require('../img/confere.png')}

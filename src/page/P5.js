@@ -55,7 +55,7 @@ export default function P5({navigation}) {
     <View>
       <ImageBackground
         style={estilos.imagemFundo}
-        source={require('../img/MontanhaLaranja.jpeg')}
+        source={require('../img/Rectangle.jpg')}
       >
         <View style={estilos.area}>
           <Text style={estilos.nameArea}>Oi " "</Text>
