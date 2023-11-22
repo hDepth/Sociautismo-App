@@ -3,9 +3,10 @@ import {ScrollView, ImageBackground, View, Text, Image, TextInput, TouchableOpac
 import estilos from '../css/estilofeedback';
 import { Audio } from 'expo-av';
 
-export default function F4({navigation}) {
+export default function F4({navigation, route}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
+  const imagemAtual = route.params.imagemAtual;
 
   useEffect(() => {
     const loadSound = async () => {
@@ -69,7 +70,7 @@ Vimos que existem muitas formas de se comunicar nao é mesmo? você pode usar a 
         </View>
         <View style={estilos.viewimagem}>
 
-          <Image style={estilos.figura} source={require('../img/pet5Headphone.png')} />
+        {imagemAtual &&<Image style={estilos.figura} source={{ uri: imagemAtual }} />}
           
           <TouchableOpacity 
           style={estilos.botaosom}
@@ -83,7 +84,13 @@ Vimos que existem muitas formas de se comunicar nao é mesmo? você pode usar a 
         </View>
       </View>
 
-      
+      <TouchableOpacity 
+      onPress={() => navigation.navigate('Home')}
+      style={{
+              
+            }}><Text style={{
+              
+            }}>Voltar</Text></TouchableOpacity>
       </ImageBackground>
     </View>
 

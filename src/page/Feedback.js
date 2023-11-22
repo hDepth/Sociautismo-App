@@ -3,9 +3,10 @@ import {ScrollView, ImageBackground, View, Text, Image, TextInput, TouchableOpac
 import estilos from '../css/estilofeedback';
 import { Audio } from 'expo-av';
 
-export default function FeedBack({navigation}) {
+export default function FeedBack({navigation, route}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
+  const imagemAtual = route.params.imagemAtual;
 
   useEffect(() => {
     const loadSound = async () => {
@@ -62,7 +63,7 @@ export default function FeedBack({navigation}) {
         </View>
         <View style={estilos.viewimagem}>
 
-          <Image style={estilos.figura} source={require('../img/pet5Headphone.png')} />
+        {imagemAtual &&<Image style={estilos.figura} source={{ uri: imagemAtual }} />}
           
           <TouchableOpacity 
           style={estilos.botaosom}
@@ -76,7 +77,13 @@ export default function FeedBack({navigation}) {
         </View>
       </View>
 
-      
+      <TouchableOpacity 
+      onPress={() => navigation.navigate('Home')}
+      style={{
+              
+            }}><Text style={{
+              
+            }}>Voltar</Text></TouchableOpacity>
       </ImageBackground>
     </View>
 

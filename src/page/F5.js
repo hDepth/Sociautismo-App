@@ -3,9 +3,10 @@ import {ScrollView, ImageBackground, View, Text, Image, TextInput, TouchableOpac
 import estilos from '../css/estilofeedback';
 import { Audio } from 'expo-av';
 
-export default function F5({navigation}) {
+export default function F5({navigation, route}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
+  const imagemAtual = route.params.imagemAtual;
 
   useEffect(() => {
     const loadSound = async () => {
@@ -69,7 +70,7 @@ Agorá vamos lá, não fique na dúvida na hora de expressar suas emoções, e a
         </View>
         <View style={estilos.viewimagem}>
 
-          <Image style={estilos.figura} source={require('../img/pet5Headphone.png')} />
+        {imagemAtual &&<Image style={estilos.figura} source={{ uri: imagemAtual }} />}
           
           <TouchableOpacity 
           style={estilos.botaosom}
@@ -82,7 +83,13 @@ Agorá vamos lá, não fique na dúvida na hora de expressar suas emoções, e a
       </TouchableOpacity>
         </View>
       </View>
-
+      <TouchableOpacity 
+      onPress={() => navigation.navigate('Home')}
+      style={{
+              
+            }}><Text style={{
+              
+            }}>Voltar</Text></TouchableOpacity>
       
       </ImageBackground>
     </View>

@@ -12,7 +12,7 @@ export default function Metas({navigation, route}) {
     navigation.navigate('F2', { imagemAtual: route.params.imagemAtual });
   };
   const Meta2 = () => {
-    navigation.navigate('Feedback', { imagemAtual: route.params.imagemAtual });
+    navigation.navigate('FeedBack', { imagemAtual: route.params.imagemAtual });
   };
   const Meta3 = () => {
     navigation.navigate('F3', { imagemAtual: route.params.imagemAtual });
