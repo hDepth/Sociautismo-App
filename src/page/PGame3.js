@@ -22,7 +22,7 @@ export default function PG3 ({navigation}) {
     useEffect(() => {
       const loadSound = async () => {
         const { sound } = await Audio.Sound.createAsync(
-          require('../audios/TiposCumprimentos.mp3') 
+          require('../audios/SituacoesAudioQ.mp3') 
         );
         setSound(sound);
       };

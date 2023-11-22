@@ -62,7 +62,7 @@ export default function P8({navigation}) {
         source={require('../img/Rectangle.jpg')}
       >
         <View style={estilos.area}>
-          <Text style={estilos.nameArea}>Oi " "</Text>
+          <Text style={estilos.nameArea}>Olá</Text>
           <Text style={estilos.textArea}>O que deseja fazer</Text>
         </View>
 

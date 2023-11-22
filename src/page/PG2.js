@@ -19,11 +19,13 @@ export default function PG2 ({navigation}) {
     const [showScoreModal, setShowScoreModal] = useState(false)
     const [isPlaying, setIsPlaying] = useState(false);
     const [sound, setSound] = useState(null);
+
+
   
     useEffect(() => {
       const loadSound = async () => {
         const { sound } = await Audio.Sound.createAsync(
-            allQuestions[currentQuestionIndex]?.audio
+         allQuestions[currentQuestionIndex]?.audio
         );
         setSound(sound);
       };
@@ -53,16 +55,14 @@ export default function PG2 ({navigation}) {
         setCorrectOption(correct_option);
         setIsOptionsDisabled(true);
         if(selectedOption==correct_option){
-            // Set Score
+    
             setScore(score+1)
         }
-        // Show Next Button
+
         setShowNextButton(true)
     }
     const handleNext = () => {
         if(currentQuestionIndex== allQuestions.length-1){
-            // Last Question
-            // Show Score Modal
             setShowScoreModal(true)
         }else{
             setCurrentQuestionIndex(currentQuestionIndex+1);
@@ -71,6 +71,7 @@ export default function PG2 ({navigation}) {
             setIsOptionsDisabled(false);
             setShowNextButton(false);
             console.log("entrou" + imagem);
+            console.log("entrou" + audio);
             imagem = allQuestions[currentQuestionIndex + 1]?.imagem;
             audio = allQuestions[currentQuestionIndex + 1]?.audio;
         }
@@ -266,7 +267,7 @@ export default function PG2 ({navigation}) {
                      
                      
                 }}>
-                    <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Next</Text>
+                    <Text style={{fontSize: 20, color: COLORS.white, textAlign: 'center'}}>Próxima</Text>
                 </TouchableOpacity>
                 
                 

@@ -6,6 +6,7 @@ import { Audio } from 'expo-av';
 
 const allQuestions = require("../data/PictogameData");
 let imagem = allQuestions[0].imagem;
+let audio = allQuestions[0].audio;
 
 export default function Pictogame ({navigation}) {
 
@@ -20,9 +21,10 @@ export default function Pictogame ({navigation}) {
     const [sound, setSound] = useState(null);
   
     useEffect(() => {
+    
       const loadSound = async () => {
         const { sound } = await Audio.Sound.createAsync(
-          require('../audios/TiposCumprimentos.mp3') 
+          (audio)
         );
         setSound(sound);
       };
@@ -53,16 +55,15 @@ export default function Pictogame ({navigation}) {
         setCorrectOption(correct_option);
         setIsOptionsDisabled(true);
         if(selectedOption==correct_option){
-            // Set Score
+           
             setScore(score+1)
         }
-        // Show Next Button
+      
         setShowNextButton(true)
     }
     const handleNext = () => {
         if(currentQuestionIndex== allQuestions.length-1){
-            // Last Question
-            // Show Score Modal
+            
             setShowScoreModal(true)
         }else{
             setCurrentQuestionIndex(currentQuestionIndex+1);
@@ -72,7 +73,8 @@ export default function Pictogame ({navigation}) {
             setShowNextButton(false);
             console.log("entrou" + imagem);
             imagem = allQuestions[currentQuestionIndex + 1]?.imagem;
-        }
+            audio = allQuestions[currentQuestionIndex + 1]?.audio;
+        } 
         Animated.timing(progress, {
             toValue: currentQuestionIndex+1,
             duration: 1000,
@@ -107,7 +109,7 @@ export default function Pictogame ({navigation}) {
                 marginVertical: 0,
             }}>
                  <ScrollView style={ {marginHorizontal: 20}}>
-                {/* Question Counter */}
+                {/* Contador de questão */}
                 <View style={{
                     flexDirection: 'row',
                     alignItems: 'flex-end'
@@ -116,7 +118,7 @@ export default function Pictogame ({navigation}) {
                     <Text style={{color: COLORS.black, fontSize: 18, opacity: 0.6}}>/ {allQuestions.length}</Text>
                 </View>
 
-                {/* Question */}
+                {/* Questão */}
                 <View style={{
                     flexDirection: 'row',
                     flexWrap: 'wrap',

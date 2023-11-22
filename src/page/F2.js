@@ -6,6 +6,7 @@ import { Audio } from 'expo-av';
 export default function F2({navigation, route}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
+  
   const imagemAtual = route.params.imagemAtual;
 
   useEffect(() => {
