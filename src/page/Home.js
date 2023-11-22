@@ -344,7 +344,13 @@ import React, { useState } from 'react';
             </Text>
            </TouchableOpacity>
         )}
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text style={estilos.areatext4}>Sair</Text>
+        </TouchableOpacity>
 
+<View>
+
+</View>
       </View>
       </ImageBackground>
     );

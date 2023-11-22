@@ -1,28 +1,14 @@
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image } from 'react-native';
 
 const Teste3 = ({ route }) => {
-  const { imagem } = route.params;
+  const imagemAtual = route.params.imagemAtual;
 
   return (
-    <View style={styles.container}>
-      <Image source={imagem} style={styles.imagem} />
+    <View>
+      {imagemAtual && <Image source={{ uri: imagemAtual }} style={{ width: 150, height: 150 }} />}
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  imagem: {
-    width: 200,
-    height: 200,
-    resizeMode: 'contain',
-  },
-});
-
 export default Teste3;
-

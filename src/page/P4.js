@@ -9,30 +9,34 @@ import estilos from '../css/estiloperso';
 
 export default function P4({navigation}) {
 
-  const [imagemAtual, setImagemAtual] = useState(require('../img/pet16.png'));
+  const [imagemAtual, setImagemAtual] = useState('https://github.com/hDepth/Sociautismo-App/assets/139086684/452b68b0-1122-4a20-b167-8e0873af2f95');
   const [alternar, setAlternar] = useState(false);
 
+
+  const navegarParaSegundaPagina = () => {
+    navigation.navigate('Metas', { imagemAtual });
+  };
 
   const buttons = [
     { label: 'Coroa', image: require('../img/Coroa.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/HamsterCoroa.png'));
+      setImagemAtual('https://github.com/hDepth/Sociautismo-App/assets/139086684/fe3e3e65-d96f-4a07-bb31-be22fd9fc3d0');
   }},
     { label: 'Laço', image: require('../img/Laço.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/HamsterLaco.png'));
+      setImagemAtual('https://github.com/hDepth/Sociautismo-App/assets/139086684/b27ee6b3-ee75-47a2-90af-da48ad2ec81e');
   }},
     { label: 'Boina', image: require('../img/boina.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/HamsterBoina.png'));
+      setImagemAtual('https://github.com/hDepth/Sociautismo-App/assets/139086684/0c814ac1-04a8-4a70-8733-1be65c71fcc2');
   }},
     { label: 'Fones De Ouvido', image: require('../img/headphone.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/HamsterFone.png'));
+      setImagemAtual('https://github.com/hDepth/Sociautismo-App/assets/139086684/6676b4e2-6e1c-412a-9edf-abc9b6c1a0bc');
   }},
     { label: 'Cartola', image: require('../img/cartola.jpeg'), onPress: () => {
  
-      setImagemAtual(require('../img/HamsterCartola.png'));
+      setImagemAtual('https://github.com/hDepth/Sociautismo-App/assets/139086684/7a2ef40d-81ac-4f33-ae80-2781e83812bc');
   }},
   ];
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
@@ -82,13 +86,13 @@ export default function P4({navigation}) {
           </View>
 
           <View style={estilos.containerPet}>
-            <Image source={imagemAtual} style={estilos.pet} />
+            <Image source={{ uri: imagemAtual}} style={estilos.pet} />
           </View>
         </View>
 
         <View style={estilos.sair}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("TabRoutes")}
+            onPress={navegarParaSegundaPagina}
             style={estilos.botaoVoltar}>
             <Image
               source={require('../img/confere.png')}

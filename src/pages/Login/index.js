@@ -7,6 +7,7 @@ import {
   ImageBackground,
   Image,
   Pressable,
+  Alert
 } from "react-native";
 import estilos from "../../css/estilologin";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -33,7 +34,8 @@ export default function Login({ navigation }) {
         console.log("Usuário entrou! - ", userCredential.user);
       })
       .catch((error) => {
-        console.log("ENOENT ERR!", error.code);
+        console.log("Usuario ou Senha Incorretos", error.code);
+        Alert.alert('Email ou Senha Incorretos', 'Verifique se o email e senha digitados estão corretos!');
       });
   }
 

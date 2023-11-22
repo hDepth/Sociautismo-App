@@ -19,6 +19,11 @@ const estilos = StyleSheet . create({
     color: '#3299CC',
     fontSize: 20,
   },
+  areatext4: {
+    color: 'red',
+    fontSize: 14,
+    alignSelf: 'center',
+  },
   titletermo: {
     fontSize: 20,
     fontWeight: 'bold',

@@ -1,33 +1,21 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 
 const Teste2 = ({ navigation, route }) => {
-  const { imagem } = route.params;
 
-  const onPressHandler = () => {
-    navigation.navigate('Teste3', { imagem });
+  const navegarParaTerceiraPagina = () => {
+    navigation.navigate('F2', { imagemAtual: route.params.imagemAtual });
   };
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={onPressHandler} style={styles.touchableOpacity}>
-        
+    <View>
+      <TouchableOpacity onPress={navegarParaTerceiraPagina}>
+        <View style={{ backgroundColor: 'lightcoral', padding: 10, margin: 10 }}>
+          <Text>Navegar para Terceira Página</Text>
+        </View>
       </TouchableOpacity>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  touchableOpacity: {
-    padding: 10,
-    backgroundColor: 'green',
-    borderRadius: 5,
-  },
-});
 
 export default Teste2;

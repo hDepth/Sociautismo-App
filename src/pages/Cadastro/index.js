@@ -50,7 +50,6 @@ export default function Cadastro({ navigation }) {
         <TextInput
           style={estilos.caixaSenha}
           placeholder="senha"
-          placeholderTextColor="#313131"
           value={password}
           onChangeText={(value) => setPassword(value)}
           secureTextEntry

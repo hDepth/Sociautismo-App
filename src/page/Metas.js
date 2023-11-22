@@ -1,15 +1,46 @@
-import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal} from 'react-native';
+import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal, Alert} from 'react-native';
 import React, { useState } from 'react';
 import estilos from '../css/estilometas'
 
-export default function Metas({navigation}) {
+export default function Metas({navigation, route}) {
 
   const [backgroundImage, setBackgroundImage] = useState(require('../img/Rectangle.jpg'));
   const [fundoModalVisible, setFundoModalVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
+  const Meta1 = () => {
+    navigation.navigate('F2', { imagemAtual: route.params.imagemAtual });
+  };
+  const Meta2 = () => {
+    navigation.navigate('Feedback', { imagemAtual: route.params.imagemAtual });
+  };
+  const Meta3 = () => {
+    navigation.navigate('F3', { imagemAtual: route.params.imagemAtual });
+  };
+  const Meta4 = () => {
+    navigation.navigate('F4', { imagemAtual: route.params.imagemAtual });
+  };
+  const Meta5 = () => {
+    navigation.navigate('F5', { imagemAtual: route.params.imagemAtual });
+  };
 
   const closeFundoModal = () => {
       setFundoModalVisible(false);
+    };
+
+    const PetAntes = () => {
+      // Exibir um alerta quando o botão for pressionado
+      Alert.alert(
+        'Escolha um Pet Antes!',
+        'Escolha o qual pet você deseja que te fale sua meta!',
+        [
+          { text: 'OK', onPress: () => console.log('OK Pressed') },
+        ],
+        { cancelable: false }
+      );
+      
+      // Navegar para a tela "Teapet" após o alerta (ou remover se não desejar navegar)
+      navigation.navigate("Teapet");
     };
 
     const changeBackground1 = () => {
@@ -155,16 +186,22 @@ export default function Metas({navigation}) {
             <ScrollView scrollEnabled>
             <View style={estilos.containersMetas}>
               <View>
-              <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("F2")}>
+              <TouchableOpacity 
+              visible={isVisible}
+              style={estilos.boxnumMeta}
+                onPress={Meta1}>
                 <Text style={estilos.numMeta}>
                   1
                 </Text>
                 </TouchableOpacity>
+
+
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
+                <TouchableOpacity onPress={PetAntes}>
                 <Text style={estilos.textMeta}>Tipos De Cumprimentos</Text>
+                </TouchableOpacity>
                 </View>
               </View>
             </View>
@@ -173,7 +210,7 @@ export default function Metas({navigation}) {
               <View>
                 
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("FeedBack")}>
+                onPress={Meta2}>
                 <Text style={estilos.numMeta}>
                   2
                 </Text>
@@ -181,7 +218,9 @@ export default function Metas({navigation}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
+              <TouchableOpacity onPress={PetAntes}>
                 <Text style={estilos.textMeta}>Que tal um abraço?</Text>
+                </TouchableOpacity>
                 </View>
               </View>
             </View>
@@ -189,7 +228,7 @@ export default function Metas({navigation}) {
             <View style={estilos.containersMetas}>
               <View>
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("F3")}>
+                onPress={Meta3}>
                 <Text style={estilos.numMeta}>
                   3
                 </Text>
@@ -197,7 +236,9 @@ export default function Metas({navigation}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
+              <TouchableOpacity onPress={PetAntes}>
                 <Text style={estilos.textMeta}>Situações Sociais</Text>
+                </TouchableOpacity>
                 </View>
               </View>
             </View>
@@ -205,7 +246,7 @@ export default function Metas({navigation}) {
             <View style={estilos.containersMetas}>
               <View>
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("F4")}>
+                onPress={Meta4}>
                 <Text style={estilos.numMeta}>
                   4
                 </Text>
@@ -213,7 +254,9 @@ export default function Metas({navigation}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
+              <TouchableOpacity onPress={PetAntes}>
                 <Text style={estilos.textMeta}>Bora Comunicar?</Text>
+                </TouchableOpacity>
                 </View>
               </View>
             </View>
@@ -221,7 +264,7 @@ export default function Metas({navigation}) {
             <View style={estilos.containersMetas}>
               <View>
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={() => navigation.navigate("F5")}>
+                onPress={Meta5}>
                 <Text style={estilos.numMeta}>
                   5
                 </Text>
@@ -229,7 +272,9 @@ export default function Metas({navigation}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
+              <TouchableOpacity onPress={PetAntes}>
                 <Text style={estilos.textMeta}>Entendo Emoções!</Text>
+                </TouchableOpacity>
                 </View>
               </View>
             </View>

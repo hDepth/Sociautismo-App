@@ -18,7 +18,7 @@ export default function RecSenha({ navigation }) {
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                alert("Ops! Alguma coisa nao deu certo. " + errorMessage + ". Tente novamente ou pressione voltar");
+                alert("É preciso informar um e-mail válido para efetuar a redefinição de senha" + errorMessage + ". Tente novamente ou pressione voltar");
                 return;
             });
 
