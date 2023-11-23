@@ -24,7 +24,7 @@ export default function Pictogame ({navigation}) {
     
       const loadSound = async () => {
         const { sound } = await Audio.Sound.createAsync(
-          (audio)
+            allQuestions[currentQuestionIndex]?.audio
         );
         setSound(sound);
       };
@@ -36,7 +36,7 @@ export default function Pictogame ({navigation}) {
           sound.unloadAsync();
         }
       };
-    }, []);
+    }, [showNextButton]);
   
     const playSound = async () => {
       if (sound) {

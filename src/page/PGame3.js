@@ -6,6 +6,7 @@ import { Audio } from 'expo-av';
 
 const allQuestions = require("../data/PD3");
 let imagem = allQuestions[0].imagem;
+let audio = allQuestions[0].audio;
 
 export default function PG3 ({navigation}) {
 
@@ -22,7 +23,7 @@ export default function PG3 ({navigation}) {
     useEffect(() => {
       const loadSound = async () => {
         const { sound } = await Audio.Sound.createAsync(
-          require('../audios/SituacoesAudioQ.mp3') 
+            allQuestions[currentQuestionIndex]?.audio
         );
         setSound(sound);
       };
@@ -34,7 +35,7 @@ export default function PG3 ({navigation}) {
           sound.unloadAsync();
         }
       };
-    }, []);
+    }, [showNextButton]);
   
     const playSound = async () => {
       if (sound) {
@@ -72,6 +73,7 @@ export default function PG3 ({navigation}) {
             setShowNextButton(false);
             console.log("entrou" + imagem);
             imagem = allQuestions[currentQuestionIndex + 1]?.imagem;
+            audio = allQuestions[currentQuestionIndex + 1]?.audio;
         }
         Animated.timing(progress, {
             toValue: currentQuestionIndex+1,

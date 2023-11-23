@@ -23,9 +23,10 @@ export default function PG2 ({navigation}) {
 
   
     useEffect(() => {
+        console.log('chamou');
       const loadSound = async () => {
         const { sound } = await Audio.Sound.createAsync(
-         allQuestions[currentQuestionIndex]?.audio
+            allQuestions[currentQuestionIndex]?.audio
         );
         setSound(sound);
       };
@@ -37,7 +38,7 @@ export default function PG2 ({navigation}) {
           sound.unloadAsync();
         }
       };
-    }, []);
+    }, [showNextButton]);
   
     const playSound = async () => {
       if (sound) {
