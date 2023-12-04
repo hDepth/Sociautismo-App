@@ -75,9 +75,12 @@ import {
       <View>
 
       <View style={{
-              flexWrap: 'wrap',
               flexDirection: 'row',
-              marginTop: 1,
+              marginTop: 40,
+              width: '100%',
+              height: 100,
+              justifyContent: 'space-between',
+              alignItems: 'center',
           }}>
         <View style={estilos.area}>
           <Text style={estilos.nameArea}>TEAPET</Text>

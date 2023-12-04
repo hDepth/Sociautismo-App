@@ -13,7 +13,7 @@ export default function Personalizacao({navigation}) {
   const [alternar, setAlternar] = useState(false);
 
   const navegarParaSegundaPagina = () => {
-    navigation.navigate('Metas', { imagemAtual });
+    navigation.navigate('Metasx', { imagemAtual });
   };
 
 
@@ -95,7 +95,7 @@ export default function Personalizacao({navigation}) {
             onPress={navegarParaSegundaPagina}
             style={estilos.botaoVoltar}>
             <Image
-              source={require('../img/confere.png')}
+              source={require('../img/checkicon.png')}
               style={estilos.iconeConfere}
             />
           </TouchableOpacity>

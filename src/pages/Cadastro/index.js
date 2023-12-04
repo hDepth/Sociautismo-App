@@ -2,7 +2,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, ImageBackground, Image } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, ImageBackground, Image, Alert } from "react-native";
 
 import app from "../../services/firebase";
 import estilos from "../../css/estilocadastro";
@@ -18,13 +18,26 @@ export default function Cadastro({ navigation }) {
 
       .then((userCredential) => {
 
-        console.log("cadastrado com sucesso - ", userCredential.user.uid);
+        Alert.alert("cadastrado com sucesso - ", userCredential.user.uid);
       })
       .catch((error) => {
-        console.log("ENOENT ERR!", error.code);
+        Alert.alert('Email Inválido!',
+        'Utilize um email válido para o cadastro! Aqui está um exemplo: Sociautismo@email.com',
+        [
+          { text: 'OK', onPress: () => console.log('OK Pressed') },
+        ],
+        { cancelable: false }
+         );
 
         if (error.code == "auth/email-already-in-use") {
-          console.log("Esse Email esta em uso");
+          Alert.alert(
+            'Email Ja está em uso',
+            'Utilize um email que ainda não foi cadastrado no app!',
+            [
+              { text: 'OK', onPress: () => console.log('OK Pressed') },
+            ],
+            { cancelable: false }
+          );
         }
       });
   }
@@ -43,7 +56,7 @@ export default function Cadastro({ navigation }) {
   
         <TextInput
           style={estilos.caixasTexto}
-          placeholder="email"
+          placeholder="email existente"
           value={email}
           onChangeText={(value) => setEmail(value)}
         />

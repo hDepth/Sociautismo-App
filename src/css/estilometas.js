@@ -11,17 +11,14 @@ const estilos = StyleSheet . create({
   arearea: {
     width: '100%',
     height: '65%',
-    marginTop: 10,
+    marginTop: 35,
   },
   areabotoes: {
     flexDirection:"row",
     borderRadius: 20, 
-    height:160,
-    width: 160,
-    marginLeft: 10, 
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    marginLeft: 25,
+    height:84,
+    width: 150,
+    marginRight: '3%',
   },
   botoesfundo: {
     display: 'flex',
@@ -42,11 +39,11 @@ const estilos = StyleSheet . create({
   area: {
     flexDirection:"row",
     backgroundColor: '#ffffff',
-    borderRadius: 20, 
+    borderRadius: 20,
+    borderWidth: 2, 
     height:90,
-    width: 140,
-    marginTop: 10,
-    marginLeft: 10, 
+    width: 150, 
+    marginLeft: '3%'
   },
   titleArea:{
     color:'#000000',

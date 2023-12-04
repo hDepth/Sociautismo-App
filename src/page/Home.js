@@ -80,13 +80,13 @@ import React, { useState } from 'react';
       <ImageBackground source={backgroundImage} style={{ flex: 1 }}>
       <View>
       <View style={estilos.area3}>
+
         <View style={estilos.area}>
-        
           <Text style={estilos.nameArea}>Olá</Text>
            <Text style={estilos.textArea}>O que deseja fazer?</Text>
         </View>
+
         <View style={estilos.area2}>
-        
         <TouchableOpacity
         style={estilos.trocarfundo}
         onPress={() => setFundoModalVisible(true)}>

@@ -4,7 +4,6 @@ const estilos = StyleSheet . create({
 
    container: {
     flex: 1,
-    justifyContent: 'center',
   },
 
   containerPrincipal:{
@@ -22,66 +21,42 @@ const estilos = StyleSheet . create({
   trocarfundo:{
 
     width: 150,
-    height: 80,
-    borderWidth: 2,
+    height: 90,
+    borderWidth: 1,
     backgroundColor: 'white',
     borderRadius: 10,
-
-
   },
   
   arearea: {
     width: '100%',
     height: '60%',
-    marginTop: 10,
+    marginTop: 35,
   },
   area: {
-    flexDirection:"row",
     backgroundColor: '#ffffff',
     borderRadius: 20, 
     height:90,
-    width: 160,
-    marginTop: 5,
-    borderWidth: 1,
-    marginLeft: 10, 
-    justifyContent: 'center'
+    width: 150,
+    borderWidth: 2,
+    justifyContent: 'center',
+    marginLeft: '3%',
   },
 
   areatopo: {
-    width: '95%',
+    width: '100%',
     height: 100,
-    marginTop: -10,
-    marginBottom: 20,
+    marginTop: 40,
     flexDirection: 'row',
-    justifyContent:'center',
-
-
+    justifyContent:'space-between',
+    alignItems: 'center',
   },
   areabotoes: {
-    flexDirection:"row",
     borderRadius: 20, 
-    height:160,
-    width: 160,
-    marginLeft: 10, 
-    justifyContent: 'center',
-    flexWrap: 'wrap'
+    height:84,
+    width: 150,
+    marginRight: '3%'
   },
-  botoesfundo: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'flex',
-    backgroundColor:"#fff",
-    borderWidth: 1,
-    borderColor: '#000',
-    borderRadius: 20,
-    height:60,
-    width:60, 
-    alignSelf: 'center',
-    marginLeft: 10,
-    marginTop: 10,
-
-  },
+ 
 
   titleArea:{
     color:'#000000',
@@ -91,13 +66,12 @@ const estilos = StyleSheet . create({
    },
 
    containersMetas: {
-    borderRadius: 10, 
     height:90,
-    width: 300,
+    width: '85%',
     alignSelf: 'center',
     marginTop: 10,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 
   boxnumMeta: {

@@ -14,7 +14,7 @@ export default function P8({navigation}) {
 
 
   const navegarParaSegundaPagina = () => {
-    navigation.navigate('Metas', { imagemAtual });
+    navigation.navigate('Metasx', { imagemAtual });
   };
 
   const buttons = [
@@ -95,7 +95,7 @@ export default function P8({navigation}) {
             onPress={navegarParaSegundaPagina}
             style={estilos.botaoVoltar}>
             <Image
-              source={require('../img/confere.png')}
+              source={require('../img/checkicon.png')}
               style={estilos.iconeConfere}
             />
           </TouchableOpacity>

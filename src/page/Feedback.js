@@ -81,9 +81,15 @@ export default function FeedBack({navigation, route}) {
       onPress={() => navigation.navigate('Home')}
       style={{
               
-            }}><Text style={{
-              
-            }}>Voltar</Text></TouchableOpacity>
+            }}><Image
+            source={require('../img/home2.png')}
+            style={{
+              width: 30,
+              height: 30,
+              marginLeft: 15,
+            }}
+              />
+              </TouchableOpacity>
       </ImageBackground>
     </View>
 

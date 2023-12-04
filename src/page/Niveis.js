@@ -38,13 +38,7 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal}
         <ImageBackground source={backgroundImage} style={{ flex: 1 }}>
           
         <View style={estilos.container}>
-            <View 
-            style={{
-              flexWrap: 'wrap',
-              flexDirection: 'row',
-              marginTop: 1,
-          
-          }}>
+           
 <View style={estilos.areatopo}>
               <View style={estilos.area}>
                 <Text style={estilos.titleArea}>Pictogame</Text>
@@ -68,7 +62,7 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal}
 
               </View>
               
-              </View>
+              
               <Modal
         animationType="slide"
         transparent={false}
@@ -234,9 +228,9 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal}
               </View>
               </ScrollView>
               
-              </View>
               
-         
+              
+              </View>
         </View>
         </ImageBackground>
     );

@@ -2,7 +2,7 @@ import {View, Text, ImageBackground, TouchableOpacity, ScrollView, Image, Modal,
 import React, { useState } from 'react';
 import estilos from '../css/estilometas'
 
-export default function Metas({navigation, route}) {
+export default function Metasx({navigation, route}) {
 
   const [backgroundImage, setBackgroundImage] = useState(require('../img/Rectangle.jpg'));
   const [fundoModalVisible, setFundoModalVisible] = useState(false);
@@ -69,13 +69,14 @@ export default function Metas({navigation, route}) {
       <View>
 
         
-          <View style={{
+      <View style={{
               flexDirection: 'row',
               marginTop: 40,
               width: '100%',
               height: 100,
               justifyContent: 'space-between',
               alignItems: 'center',
+              borderWidth: 1,
           }}>
 
             <View style={estilos.area}>
@@ -192,7 +193,7 @@ export default function Metas({navigation, route}) {
               <TouchableOpacity 
               visible={isVisible}
               style={estilos.boxnumMeta}
-                onPress={PetAntes}>
+                onPress={Meta1}>
                 <Text style={estilos.numMeta}>
                   1
                 </Text>
@@ -202,7 +203,7 @@ export default function Metas({navigation, route}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-                <TouchableOpacity onPress={PetAntes}>
+                <TouchableOpacity onPress={Meta1}>
                 <Text style={estilos.textMeta}>Tipos De Cumprimentos</Text>
                 </TouchableOpacity>
                 </View>
@@ -213,7 +214,7 @@ export default function Metas({navigation, route}) {
               <View>
                 
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={PetAntes}>
+                onPress={Meta2}>
                 <Text style={estilos.numMeta}>
                   2
                 </Text>
@@ -221,7 +222,7 @@ export default function Metas({navigation, route}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-              <TouchableOpacity onPress={PetAntes}>
+              <TouchableOpacity onPress={Meta2}>
                 <Text style={estilos.textMeta}>Que tal um abraço?</Text>
                 </TouchableOpacity>
                 </View>
@@ -231,7 +232,7 @@ export default function Metas({navigation, route}) {
             <View style={estilos.containersMetas}>
               <View>
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={PetAntes}>
+                onPress={Meta3}>
                 <Text style={estilos.numMeta}>
                   3
                 </Text>
@@ -239,7 +240,7 @@ export default function Metas({navigation, route}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-              <TouchableOpacity onPress={PetAntes}>
+              <TouchableOpacity onPress={Meta3}>
                 <Text style={estilos.textMeta}>Situações Sociais</Text>
                 </TouchableOpacity>
                 </View>
@@ -249,7 +250,7 @@ export default function Metas({navigation, route}) {
             <View style={estilos.containersMetas}>
               <View>
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={PetAntes}>
+                onPress={Meta4}>
                 <Text style={estilos.numMeta}>
                   4
                 </Text>
@@ -257,7 +258,7 @@ export default function Metas({navigation, route}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-              <TouchableOpacity onPress={PetAntes}>
+              <TouchableOpacity onPress={Meta4}>
                 <Text style={estilos.textMeta}>Bora Comunicar?</Text>
                 </TouchableOpacity>
                 </View>
@@ -267,7 +268,7 @@ export default function Metas({navigation, route}) {
             <View style={estilos.containersMetas}>
               <View>
               <TouchableOpacity style={estilos.boxnumMeta}
-                onPress={PetAntes}>
+                onPress={Meta5}>
                 <Text style={estilos.numMeta}>
                   5
                 </Text>
@@ -275,7 +276,7 @@ export default function Metas({navigation, route}) {
               </View>
               <View style={estilos.containerColumn}>
               <View style={estilos.containerTmetas}>
-              <TouchableOpacity onPress={PetAntes}>
+              <TouchableOpacity onPress={Meta5}>
                 <Text style={estilos.textMeta}>Entendo Emoções!</Text>
                 </TouchableOpacity>
                 </View>

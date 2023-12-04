@@ -6,14 +6,15 @@ const estilos = StyleSheet . create({
     borderWidth: 2,
     backgroundColor: 'white',
     borderColor: '#000',
-    borderRadius: 20, 
+    borderRadius: 20,
+    marginLeft: '3%',
     height:90,
-    width: 140,
-    
+    width: 150,
   },
   area2: {
-    justifyContent: 'center',
-    marginLeft: 20,
+    height:84,
+    width: 150,
+    marginRight: '3%',
   },
   areatext3: {
     color: '#3299CC',
@@ -88,10 +89,11 @@ const estilos = StyleSheet . create({
   },
   area3: {
     flexDirection: 'row',
-    width: '95%',
-    height: 90,
-    marginTop: 40,
-    marginLeft: 10, 
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    height: 100,
+    marginTop: 40, 
     marginBottom: -15,
 
   },
@@ -225,7 +227,7 @@ const estilos = StyleSheet . create({
   },
   trocarfundo:{
     width: 150,
-    height: 80,
+    height: 84,
     borderWidth: 2,
     backgroundColor: 'white',
     borderRadius: 10,
